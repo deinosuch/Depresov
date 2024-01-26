@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://bt2uxuplvx12t"]
+
+[ext_resource type="Script" path="res://scripts/person.gd" id="1_w0pd6"]
+[ext_resource type="Texture2D" uid="uid://bbi0pgpij1430" path="res://People/stickman.png" id="2_h1742"]
+
+[resource]
+script = ExtResource("1_w0pd6")
+name = "Jenicek"
+rights = true
+happiness = 100
+energy = 100
+health = 100
+hunger = 100
+anxiety = 100
+sprite = ExtResource("2_h1742")
