@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Counter" load_steps=2 format=3 uid="uid://ckr4hriq5536"]
+
+[ext_resource type="Script" path="res://scripts/counter.gd" id="1_1t745"]
+
+[resource]
+script = ExtResource("1_1t745")
+amount = 0
