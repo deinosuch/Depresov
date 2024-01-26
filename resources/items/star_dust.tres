@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bwfbq34br5qgx"]
+
+[ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_0c7ma"]
+
+[resource]
+script = ExtResource("1_0c7ma")
+name = "Star Dust"

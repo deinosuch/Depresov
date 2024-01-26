@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://dr2pqa33j8yd4"]
+
+[ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_psker"]
+
+[resource]
+script = ExtResource("1_psker")
+name = "Gleamed Joy"

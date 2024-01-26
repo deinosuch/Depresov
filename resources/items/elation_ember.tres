@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://ct4vm2mgnei2g"]
+
+[ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_fq42x"]
+
+[resource]
+script = ExtResource("1_fq42x")
+name = "Elation Ember"
