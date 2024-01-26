@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dmpx5itvm1tq5"]
+
+[ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_ydefh"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sa17a"]
+size = Vector2(100, 100)
+
+[resource]
+script = ExtResource("1_ydefh")
+name = "Caffeine"
+texture = SubResource("PlaceholderTexture2D_sa17a")
