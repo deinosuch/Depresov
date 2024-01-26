@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkpe3qnl2knxt"]
+
+[ext_resource type="Script" path="res://resources/inventory_slot_ui.gd" id="1_1nuxw"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0ydds"]
+size = Vector2(30, 30)
+
+[node name="InventorySlotUi" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(30, 30)
+offset_right = 30.0
+offset_bottom = 30.0
+script = ExtResource("1_1nuxw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_0ydds")
+centered = false

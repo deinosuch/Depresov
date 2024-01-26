@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=5 format=3 uid="uid://vs30wvw83kp8"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=7 format=3 uid="uid://vs30wvw83kp8"]
 
 [ext_resource type="Resource" uid="uid://dmpx5itvm1tq5" path="res://resources/items/caffeine.tres" id="1_7ukij"]
 [ext_resource type="Script" path="res://scripts/inventory/inventory.gd" id="1_8v5ox"]
@@ -7,8 +7,18 @@
 [sub_resource type="Resource" id="Resource_oolry"]
 script = ExtResource("2_u8rql")
 item = ExtResource("1_7ukij")
-amount = 0
+amount = 1
+
+[sub_resource type="Resource" id="Resource_cd8w7"]
+script = ExtResource("2_u8rql")
+item = ExtResource("1_7ukij")
+amount = 1
+
+[sub_resource type="Resource" id="Resource_6ok4i"]
+script = ExtResource("2_u8rql")
+item = ExtResource("1_7ukij")
+amount = 1
 
 [resource]
 script = ExtResource("1_8v5ox")
-items = Array[ExtResource("2_u8rql")]([SubResource("Resource_oolry"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+items = Array[ExtResource("2_u8rql")]([SubResource("Resource_oolry"), SubResource("Resource_cd8w7"), null, SubResource("Resource_6ok4i"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])

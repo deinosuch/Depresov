@@ -1,29 +1,98 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1pds6iln6nae"]
+[gd_scene load_steps=3 format=3 uid="uid://b1pds6iln6nae"]
 
-[ext_resource type="Script" path="res://Inventory UI.gd" id="1_bue6y"]
-[ext_resource type="Resource" uid="uid://vs30wvw83kp8" path="res://resources/inventory.tres" id="2_75je3"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ojywf"]
-size = Vector2(50, 100)
+[ext_resource type="Script" path="res://resources/inventory_ui.gd" id="1_bue6y"]
+[ext_resource type="PackedScene" uid="uid://bkpe3qnl2knxt" path="res://resources/inventory_slot_ui.tscn" id="2_v63j7"]
 
 [node name="Inventory UI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 91.0
-offset_top = 48.0
-offset_right = 91.0
-offset_bottom = 48.0
+offset_left = 469.0
+offset_top = 219.0
+offset_right = -517.0
+offset_bottom = -297.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bue6y")
-inv = ExtResource("2_75je3")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 13.0
-offset_right = 46.0
-offset_bottom = 53.0
-texture = SubResource("PlaceholderTexture2D_ojywf")
+offset_right = 167.0
+offset_bottom = 131.0
+draw_center = false
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -66.0
+offset_right = 83.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="InventorySlotUi" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi8" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi9" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi10" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi11" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi12" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi13" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi14" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi15" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi16" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi17" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi18" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi19" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
+
+[node name="InventorySlotUi20" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
+layout_mode = 2
