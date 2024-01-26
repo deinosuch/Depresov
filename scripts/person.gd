@@ -10,4 +10,4 @@ class_name Person
 @export var health : int = 100
 @export var hunger : int = 100
 @export var anxiety : int = 100
-
+@export var sprite : Texture2D
