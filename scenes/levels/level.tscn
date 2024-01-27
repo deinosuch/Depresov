@@ -18,3 +18,9 @@ layout_mode = 1
 offset_right = 400.0
 offset_bottom = 263.0
 columns = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
