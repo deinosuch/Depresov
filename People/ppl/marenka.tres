@@ -1,18 +1,16 @@
 [gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://cwxgua15att41"]
 
 [ext_resource type="Script" path="res://scripts/person.gd" id="1_ft2d5"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_legna"]
-load_path = "res://.godot/imported/character1.png-97c5a4a35b0226a708c80c5c39894c02.ctex"
+[ext_resource type="Texture2D" uid="uid://cohmkvycrppyk" path="res://ui/people/marenka.png" id="2_xyjrp"]
 
 [resource]
 script = ExtResource("1_ft2d5")
 name = "Marenka"
 rights = true
-sprite = SubResource("CompressedTexture2D_legna")
+sprite = ExtResource("2_xyjrp")
 negative_penalty = 1.5
 mood = 100
 energy = 100
 health = 50
-hunger = 50
-anxiety = 100
+focus = 0
+calmness = 0
