@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cx0k0caxk5pk"]
+[gd_scene load_steps=11 format=3 uid="uid://cx0k0caxk5pk"]
 
 [ext_resource type="Script" path="res://scripts/levels/level.gd" id="1_i0pye"]
 [ext_resource type="PackedScene" uid="uid://b1pds6iln6nae" path="res://resources/inventory_ui.tscn" id="2_fd0tv"]
-[ext_resource type="PackedScene" uid="uid://b1ksb5tmyshmo" path="res://People/queue.tscn" id="3_wlad1"]
-[ext_resource type="Resource" uid="uid://tw41kugyqesm" path="res://People/ppl/marenka.tres" id="4_kviue"]
+[ext_resource type="PackedScene" uid="uid://3vutjbu2rodw" path="res://People/queue.tscn" id="3_wlad1"]
+[ext_resource type="Resource" uid="uid://dw2yjulanu4sm" path="res://People/ppl/jerome.tres" id="4_kviue"]
+[ext_resource type="Resource" uid="uid://dlklxny1qrxbq" path="res://People/ppl/marenka.tres" id="5_lqtxh"]
+[ext_resource type="Script" path="res://scenes/levels/paralax_bg.gd" id="6_c4fji"]
+[ext_resource type="Texture2D" uid="uid://b6agsdhmwp342" path="res://ui/background/sky_bckg.png" id="6_pgmnf"]
+[ext_resource type="Texture2D" uid="uid://cls77stfh4mil" path="res://ui/background/game_screen_notexture.png" id="6_qxqqu"]
+[ext_resource type="Texture2D" uid="uid://bvd7yedmblw5k" path="res://ui/background/sky_clouds_small.png" id="7_jdka3"]
+[ext_resource type="Texture2D" uid="uid://d0ydtwyu2atvl" path="res://ui/background/sky_clouds_big_floofy.png" id="9_urgf3"]
 
 [node name="Controller" type="Control"]
 layout_mode = 3
@@ -22,7 +28,7 @@ columns = 2
 
 [node name="Inventory UI" parent="." instance=ExtResource("2_fd0tv")]
 layout_mode = 1
-offset_top = -295.0
+offset_top = -189.0
 offset_right = 0.0
 offset_bottom = 0.0
 
@@ -34,7 +40,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_right = 0.0
-queue = Array[Resource("res://scripts/person.gd")]([ExtResource("4_kviue")])
+queue = Array[Resource("res://scripts/person.gd")]([ExtResource("4_kviue"), ExtResource("5_lqtxh")])
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -43,5 +49,36 @@ offset_top = 528.0
 offset_right = 1094.0
 offset_bottom = 585.0
 text = "Next"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("6_c4fji")
+scrolling_speed = 40
+
+[node name="SkyBckg" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(504, 253)
+texture = ExtResource("6_pgmnf")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(2150, 0)
+
+[node name="SkyCloudsSmall" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(671, 229)
+scale = Vector2(0.544444, 0.544444)
+texture = ExtResource("7_jdka3")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(1458, 0)
+
+[node name="SkyCloudsBigFloofy" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(411, 192)
+scale = Vector2(0.356018, 0.356019)
+texture = ExtResource("9_urgf3")
+
+[node name="GameScreenNotexture" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(576, 324.5)
+scale = Vector2(0.601042, 0.602778)
+texture = ExtResource("6_qxqqu")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
