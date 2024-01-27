@@ -1,16 +1,16 @@
-[gd_resource type="Resource" script_class="Person" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://dw2yjulanu4sm"]
 
 [ext_resource type="Script" path="res://scripts/person.gd" id="1_owed3"]
-[ext_resource type="Texture2D" path="res://People/jerome.png" id="2_6gh08"]
+[ext_resource type="Texture2D" uid="uid://cbmgyrsgc3feo" path="res://ui/people/jerome.png" id="2_cafgy"]
 
 [resource]
 script = ExtResource("1_owed3")
-name = "Marenka"
+name = "Jerome"
 rights = true
-sprite = ExtResource("2_6gh08")
+sprite = ExtResource("2_cafgy")
 negative_penalty = 1.5
 happiness = 100
 energy = 100
-health = 80
-hunger = 80
+health = 90
+hunger = 90
 anxiety = 100

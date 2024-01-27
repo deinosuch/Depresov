@@ -34,6 +34,7 @@ func is_empty():
 	return !slot or slot.is_empty()
 
 func update():
+
 	if is_empty():
 		visible = false
 	else:

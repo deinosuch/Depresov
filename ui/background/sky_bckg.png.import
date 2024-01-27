@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbmgyrsgc3feo"
-path="res://.godot/imported/jerome.png-0160ae4fc9393ff0855d0d85422321d2.ctex"
+uid="uid://b6agsdhmwp342"
+path="res://.godot/imported/sky_bckg.png-ae64480f8fac22e6958f772e1fa103d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://People/jerome.png"
-dest_files=["res://.godot/imported/jerome.png-0160ae4fc9393ff0855d0d85422321d2.ctex"]
+source_file="res://ui/background/sky_bckg.png"
+dest_files=["res://.godot/imported/sky_bckg.png-ae64480f8fac22e6958f772e1fa103d3.ctex"]
 
 [params]
 
