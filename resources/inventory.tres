@@ -51,27 +51,27 @@ amount = 20
 [sub_resource type="Resource" id="Resource_3uv80"]
 script = ExtResource("2_u8rql")
 item = ExtResource("7_4smpq")
-amount = 0
+amount = 1
 
 [sub_resource type="Resource" id="Resource_bxe0s"]
 script = ExtResource("2_u8rql")
 item = ExtResource("8_n0hv6")
-amount = 0
+amount = 1
 
 [sub_resource type="Resource" id="Resource_tdcq4"]
 script = ExtResource("2_u8rql")
 item = ExtResource("9_37fe1")
-amount = 0
+amount = 1
 
 [sub_resource type="Resource" id="Resource_1aeev"]
 script = ExtResource("2_u8rql")
 item = ExtResource("10_kas5a")
-amount = 0
+amount = 1
 
 [sub_resource type="Resource" id="Resource_sfkmq"]
 script = ExtResource("2_u8rql")
 item = ExtResource("11_diniy")
-amount = 0
+amount = 1
 
 [sub_resource type="Resource" id="Resource_n2b1e"]
 script = ExtResource("2_u8rql")
