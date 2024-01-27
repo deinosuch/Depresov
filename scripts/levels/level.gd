@@ -60,7 +60,7 @@ func get_random_stat_in_span():
 func get_stat_dec():
 	var dec = get_random_stat_in_span()
 	for i in range(len(dec)):
-		dec[i] = -dec[i]
+		dec[i] *= -1
 	return dec
 
 
