@@ -3,7 +3,15 @@
 [ext_resource type="Script" path="res://scenes/shop_item.gd" id="1_frmrg"]
 
 [node name="ShopItem" type="CenterContainer"]
+custom_minimum_size = Vector2(75, 75)
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 mouse_default_cursor_shape = 2
 script = ExtResource("1_frmrg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+expand_mode = 1
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

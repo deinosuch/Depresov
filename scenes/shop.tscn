@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvn3iw73005dp"]
+[gd_scene load_steps=4 format=3 uid="uid://dvn3iw73005dp"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_dgp7v"]
+[ext_resource type="Texture2D" uid="uid://d27rfdfs6go0f" path="res://ui/items/worktable.png" id="2_3ingu"]
+[ext_resource type="PackedScene" uid="uid://c07by706dteba" path="res://scenes/shop_item.tscn" id="3_1eqh0"]
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -11,11 +13,74 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dgp7v")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Panel" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(650, 165)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_3ingu")
 
-[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
-layout_mode = 0
-columns = 5
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -314.0
+offset_top = -77.0
+offset_right = 314.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 8
+
+[node name="ShopItem" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem2" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem3" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem4" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem5" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem6" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem7" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem8" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem9" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem10" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem11" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem12" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem13" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem14" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
+
+[node name="ShopItem15" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2
