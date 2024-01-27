@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://dlklxny1qrxbq"]
+[gd_resource type="Resource" script_class="Person" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://scripts/person.gd" id="1_ft2d5"]
 
@@ -13,6 +13,6 @@ sprite = SubResource("CompressedTexture2D_legna")
 negative_penalty = 1.5
 mood = 100
 energy = 100
-health = 100
-focus = 100
-anxiety = 100
+health = 0
+focus = 0
+calmness = 0
