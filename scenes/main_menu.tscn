@@ -1,10 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmpafpo440inp"]
-
-[ext_resource type="AudioStream" uid="uid://busy381j0tb62" path="res://audio/buben.wav" id="2_o522a"]
+[gd_scene load_steps=8 format=3 uid="uid://dmpafpo440inp"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_d3kki"]
 [ext_resource type="Texture2D" uid="uid://b6agsdhmwp342" path="res://ui/background/sky_bckg.png" id="2_3n7rm"]
 [ext_resource type="Texture2D" uid="uid://bj0bjibmn4elk" path="res://ui/startscreen_button.png" id="2_eigxl"]
+[ext_resource type="AudioStream" uid="uid://busy381j0tb62" path="res://audio/buben.wav" id="2_o522a"]
 [ext_resource type="Script" path="res://scenes/ParallaxBackground.gd" id="2_t1snu"]
 [ext_resource type="Texture2D" uid="uid://d0ydtwyu2atvl" path="res://ui/background/sky_clouds_big_floofy.png" id="3_63uqk"]
 [ext_resource type="Texture2D" uid="uid://bvd7yedmblw5k" path="res://ui/background/sky_clouds_small.png" id="4_fu20j"]
@@ -25,22 +24,22 @@ script = ExtResource("2_t1snu")
 position = Vector2(868, 326)
 texture = ExtResource("2_3n7rm")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(1200, 0)
-
-[node name="SkyCloudsBigFloofy" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(573, 491)
-scale = Vector2(0.288252, 0.288252)
-texture = ExtResource("3_63uqk")
-
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(2400, 0)
 
 [node name="SkyCloudsSmall" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2(1200, 325)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_fu20j")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1200, 0)
+
+[node name="SkyCloudsBigFloofy" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(573, 491)
+scale = Vector2(0.288252, 0.288252)
+texture = ExtResource("3_63uqk")
 
 [node name="Quit" type="NinePatchRect" parent="."]
 layout_mode = 1
@@ -105,8 +104,10 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Start"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_o522a")
 autoplay = true
+
 [connection signal="gui_input" from="Quit" to="." method="_on_quit_gui_input"]
 [connection signal="gui_input" from="Start" to="." method="_on_start_gui_input"]
