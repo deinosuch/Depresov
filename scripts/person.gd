@@ -39,7 +39,7 @@ func get_money_gain(diff):
 		var am = diff[i]
 		if diff[i] < 0: am *= negative_penalty
 		sum += diff[i]
-	return sum
+	return int(sum)
 	
 func get_happy_gain(diff):
 	var sum = 0
@@ -47,7 +47,7 @@ func get_happy_gain(diff):
 		var am = diff[i] * (100 - last_values[i]) / 10
 		if diff[i] < 0: am *= negative_penalty
 		sum += am
-	return sum
+	return int(sum)
 
 func get_difference():
 	var diff = [mood, energy, health, focus, calmness]
