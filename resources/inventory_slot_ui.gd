@@ -1,10 +1,11 @@
 extends Panel
 
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var texture: TextureRect = $CenterContainer/TextureRect
+	
 
 func update(slot: Slot):
 	if !slot or slot.amount <= 0:
-		sprite.visible = false
+		texture.visible = false
 	else:
-		sprite.visible = true
-		sprite.texture = slot.item.texture
+		texture.visible = true
+		texture.texture = slot.item.texture
