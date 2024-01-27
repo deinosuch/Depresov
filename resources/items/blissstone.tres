@@ -7,6 +7,7 @@
 script = ExtResource("1_vr7cd")
 name = "Blissstone"
 texture = ExtResource("2_783n4")
+price = 10
 happiness = 100
 energy = 100
 health = 100

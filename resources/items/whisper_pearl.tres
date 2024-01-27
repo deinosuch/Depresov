@@ -7,6 +7,7 @@
 script = ExtResource("1_kb3xs")
 name = "Whisper Pearl"
 texture = ExtResource("2_qew62")
+price = 10
 happiness = 100
 energy = 100
 health = 100

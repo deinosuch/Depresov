@@ -7,6 +7,7 @@
 script = ExtResource("1_kpd4v")
 name = "Spark of Harmony"
 texture = ExtResource("2_xbhr1")
+price = 10
 happiness = 100
 energy = 100
 health = 100

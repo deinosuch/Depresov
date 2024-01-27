@@ -7,6 +7,7 @@
 script = ExtResource("1_3vt7f")
 name = "Water"
 texture = ExtResource("2_l1ew3")
+price = 10
 happiness = 100
 energy = 100
 health = 100
