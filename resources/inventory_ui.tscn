@@ -5,19 +5,21 @@
 
 [node name="Inventory UI" type="Control"]
 layout_mode = 3
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -986.0
-offset_bottom = -516.0
+offset_top = -648.0
+offset_right = -1152.0
+offset_bottom = -648.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 script = ExtResource("1_bue6y")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 167.0
-offset_bottom = 131.0
+offset_right = 516.0
+offset_bottom = 412.0
 draw_center = false
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
@@ -27,10 +29,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -83.5
-offset_top = -65.5
-offset_right = 432.5
-offset_bottom = 346.5
+offset_left = -258.0
+offset_top = -206.0
+offset_right = 258.0
+offset_bottom = 206.0
 grow_horizontal = 2
 grow_vertical = 2
 columns = 5
