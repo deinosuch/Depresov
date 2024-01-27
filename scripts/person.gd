@@ -6,8 +6,10 @@ class_name Person
 @export var name : String = ""
 @export var rights : bool = true
 @export var sprite : Texture2D
+
+const negative_penalty : float =  1.5 #negative penalty multiplier
+const default_vals = [50,50,50,50,50]
 var last_values = [mood, energy, health, focus, calmness]
-@export var negative_penalty : float =  1.5# negative penalty multiplier
 
 func update_last_val():
 	last_values = [mood, energy, health, focus, calmness]
@@ -25,10 +27,6 @@ func add_stats(object : HasStats):
 	health = max(0, min(100, health + object.health))
 	focus = max(0, min(100, focus + object.focus))
 	calmness = max(0, min(100, calmness + object.calmness))
-	#var diff = get_difference()
-	#print(get_money_gain(diff))
-	#print(get_happy_gain(diff))
-	#update_last_val()
 	ResourceSaver.save(self)
 
 func get_metrics():
@@ -56,3 +54,22 @@ func get_difference():
 	for i in range(len(diff)):
 		diff[i] -= last_values[i]
 	return diff
+	
+func reset_to_default():
+	set_array_to_stats(default_vals)
+	
+func set_array_to_stats(vals):
+	mood = max(0, min(100, vals[0]))
+	energy = max(0, min(100, vals[1]))
+	health = max(0, min(100, vals[2]))
+	focus = max(0, min(100, vals[3]))
+	calmness = max(0, min(100, vals[4]))
+	ResourceSaver.save(self)
+	
+func add_array_to_stats(vals):
+	mood = max(0, min(100, mood + vals[0]))
+	energy = max(0, min(100, energy + vals[1]))
+	health = max(0, min(100, health + vals[2]))
+	focus = max(0, min(100, focus + vals[3]))
+	calmness = max(0, min(100, calmness + vals[4]))
+	ResourceSaver.save(self)

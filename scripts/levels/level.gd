@@ -5,6 +5,11 @@ class_name level
 var current_person
 var queue : PersonQueue
 var stats
+# constants, span a to b
+const a = 5
+const b = 15
+var rng
+
 @onready var game = get_node("/root/GameData") 
 
 func _show_stats(person : Person):
@@ -30,6 +35,7 @@ func _update_stats():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	rng = RandomNumberGenerator.new()
 	game.current_level = self
 	#person_sprite = $Person
 	stats = $ItemList
@@ -42,10 +48,18 @@ func _ready():
 func _process(delta):
 	pass
 
+func get_stat_dec():
+	var dec = [0,0,0,0,0]	
+	for i in range(len(dec)):
+		dec[i] = -rng.randf_range(a,b)
+	return dec
+		
 func _on_button_pressed():
 	# Call update functions for metrics after person has been dealt with
 	var metrics = current_person.get_metrics()
 	game.update_metrics(metrics[0], metrics[1])
+	#     decrease stats for next round
+	current_person.add_array_to_stats(get_stat_dec())
 	# load next person
 	current_person = queue.next()
 	if(current_person == null):
