@@ -3,6 +3,7 @@ extends Control
 class_name PersonQueue
 
 var queue : Array[Person]
+var first_load = true
 
 func next():
 	if queue.size() == 0:
@@ -19,6 +20,9 @@ func _ready():
 	var directory_path : String = "res://People/ppl/"
 	
 	for filename in DirAccess.get_files_at(directory_path):
-		queue.push_back(load(directory_path + filename))
+		var person = load(directory_path + filename)
+		if first_load: person.reset_stats()
+		queue.push_back(person)
 	
+	first_load = false
 	queue.shuffle()

@@ -14,3 +14,11 @@ func add_stats(object : HasStats):
 	hunger = max(0, min(100, hunger + object.hunger))
 	anxiety = max(0, min(100, anxiety + object.anxiety))
 	ResourceSaver.save(self)
+
+func reset_stats():
+	happiness = 100
+	energy = 100
+	health = 100
+	hunger = 100
+	anxiety = 100
+	ResourceSaver.save(self)
