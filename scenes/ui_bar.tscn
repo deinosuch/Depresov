@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmnp4hcv1phxd"]
+
+[ext_resource type="Script" path="res://scenes/ui_bar.gd" id="1_ra8r3"]
+[ext_resource type="Texture2D" uid="uid://dk5ktvgj86hdw" path="res://ui/horni_lista.png" id="2_js14y"]
+[ext_resource type="Texture2D" uid="uid://dy0rajwdl18y5" path="res://ui/bar1_empty.png" id="3_p5soo"]
+[ext_resource type="Texture2D" uid="uid://ctobf5jor2fbg" path="res://ui/bar1_full.png" id="4_ykdad"]
+
+[node name="UiBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ra8r3")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 52.0
+grow_horizontal = 2
+texture = ExtResource("2_js14y")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -258.0
+offset_top = -20.0
+offset_right = 392.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+max_value = 10000.0
+texture_under = ExtResource("3_p5soo")
+texture_progress = ExtResource("4_ykdad")
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 914.0
+offset_right = 1022.0
+offset_bottom = 35.0
+scale = Vector2(1.5, 1.5)
+text = "1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_direction = 2

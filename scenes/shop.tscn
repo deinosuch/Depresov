@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvn3iw73005dp"]
+[gd_scene load_steps=6 format=3 uid="uid://dvn3iw73005dp"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_dgp7v"]
 [ext_resource type="Texture2D" uid="uid://d27rfdfs6go0f" path="res://ui/items/worktable.png" id="2_3ingu"]
 [ext_resource type="PackedScene" uid="uid://c07by706dteba" path="res://scenes/shop_item.tscn" id="3_1eqh0"]
 [ext_resource type="AudioStream" uid="uid://do2nlam7be7o3" path="res://audio/shop.wav" id="4_rm2b7"]
+[ext_resource type="PackedScene" uid="uid://dmnp4hcv1phxd" path="res://scenes/ui_bar.tscn" id="5_nn7oi"]
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -112,5 +113,9 @@ text = "Buy"
 stream = ExtResource("4_rm2b7")
 volume_db = -5.0
 autoplay = true
+
+[node name="UiBar" parent="." instance=ExtResource("5_nn7oi")]
+layout_mode = 1
+offset_bottom = -598.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://dh0inm48mgbgb"]
+[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://w2q2bcasqahj"]
 
 [ext_resource type="Script" path="res://scripts/person.gd" id="1_s0loi"]
 [ext_resource type="Texture2D" uid="uid://7vbfy6mjumva" path="res://ui/people/adam.png" id="2_at1ts"]
@@ -8,9 +8,8 @@ script = ExtResource("1_s0loi")
 name = "Adam"
 rights = true
 sprite = ExtResource("2_at1ts")
-negative_penalty = 1.5
-mood = 90
-energy = 100
-health = 100
-hunger = 100
-anxiety = 100
+mood = 45.2177
+energy = 44.7745
+health = 16.7375
+focus = 48.5979
+calmness = 52.8971
