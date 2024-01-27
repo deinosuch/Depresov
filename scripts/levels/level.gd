@@ -34,6 +34,7 @@ func _show_stats(person : Person):
 		stats.add_child(bar)
 
 func _update_stats(person : Person):
+	if person == null: return # idk man, it works now
 	var person_stats = person.get_stats()
 	for i in range(person_stats.size()):
 		
