@@ -41,7 +41,9 @@ func _ready():
 	stats = $ItemList
 	queue = $Queue as PersonQueue
 	current_person = queue.next()
-	if game.first_rodeo: current_person.reset_to_default()
+	if game.first_rodeo:
+		current_person.reset_to_default()
+		current_person.add_array_to_stats(get_random_stat_in_span())
 	current_person.update_last_val()
 	_show_stats(current_person)
 
@@ -49,12 +51,19 @@ func _ready():
 func _process(delta):
 	pass
 
+func get_random_stat_in_span():
+	var stat = [0,0,0,0,0]
+	for i in range(len(stat)):
+		stat[i] = rng.randf_range(a,b)
+	return stat
+
 func get_stat_dec():
-	var dec = [0,0,0,0,0]
+	var dec = get_random_stat_in_span()
 	for i in range(len(dec)):
-		dec[i] = -rng.randf_range(a,b)
+		dec[i] = -dec[i]
 	return dec
-		
+
+
 func _on_button_pressed():
 	# Call update functions for metrics after person has been dealt with
 	var metrics = current_person.get_metrics()
@@ -66,6 +75,9 @@ func _on_button_pressed():
 	if(current_person == null):
 		game.first_rodeo = false
 		return
-	if game.first_rodeo: current_person.reset_to_default()
+	if game.first_rodeo:
+		current_person.reset_to_default()
+		current_person.add_array_to_stats(get_random_stat_in_span())
+	
 	current_person.update_last_val()
 	_update_stats()
