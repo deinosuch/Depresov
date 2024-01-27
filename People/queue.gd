@@ -6,8 +6,9 @@ var queue : Array[Person]
 
 func next():
 	if queue.size() == 0:
-		get_tree().quit() #For some reason not quitting??!
-		return null
+		_ready()
+		#get_tree().quit() #For some reason not quitting??!
+		#return null
 	var person = queue.pop_back()
 	$Person.texture = person.sprite
 	return person
