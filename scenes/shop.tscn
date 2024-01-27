@@ -84,3 +84,6 @@ layout_mode = 2
 
 [node name="ShopItem15" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
 layout_mode = 2
+
+[node name="ShopItem16" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
+layout_mode = 2

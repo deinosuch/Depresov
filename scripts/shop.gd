@@ -10,7 +10,7 @@ func _ready():
 		var item = load(directory_path + filename)
 		$Panel/GridContainer.get_child(i).initialize(item)
 		i+=1
-		if(i == 15):
+		if(i == 16):
 			break
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
