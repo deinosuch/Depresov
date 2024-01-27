@@ -23,5 +23,5 @@ func _on_gui_input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			slot.item.use(level.level.current_person)
 			slot.amount -= 1
-			level.level._update_stats(level.level.current_person)
+			level.level._update_stats()
 			update()
