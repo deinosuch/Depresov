@@ -1,11 +1,12 @@
 extends Panel
 
 @onready var texture: TextureRect = $CenterContainer/TextureRect
-	
+@onready var count: Label = $Panel/Count
 
 func update(slot: Slot):
 	if !slot or slot.amount <= 0:
-		texture.visible = false
+		visible = false
 	else:
-		texture.visible = true
+		visible = true
 		texture.texture = slot.item.texture
+		count.text = str(slot.amount)
