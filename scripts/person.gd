@@ -6,25 +6,25 @@ class_name Person
 @export var name : String = ""
 @export var rights : bool = true
 @export var sprite : Texture2D
-var last_values = [mood, energy, health, focus, anxiety]
+var last_values = [mood, energy, health, focus, calmness]
 @export var negative_penalty : float =  1.5# negative penalty multiplier
 
 func update_last_val():
-	last_values = [mood, energy, health, focus, anxiety]
+	last_values = [mood, energy, health, focus, calmness]
 
 func print_out_stat():
 	print(mood)
 	print(energy)
 	print(health)
 	print(focus)
-	print(anxiety)
+	print(calmness)
 
 func add_stats(object : HasStats):
 	mood = max(0, min(100, mood + object.mood))
 	energy = max(0, min(100, energy + object.energy))
 	health = max(0, min(100, health + object.health))
 	focus = max(0, min(100, focus + object.focus))
-	anxiety = max(0, min(100, anxiety + object.anxiety))
+	calmness = max(0, min(100, calmness + object.calmness))
 	#var diff = get_difference()
 	#print(get_money_gain(diff))
 	#print(get_happy_gain(diff))
@@ -48,7 +48,7 @@ func get_happy_gain(diff):
 	return sum
 
 func get_difference():
-	var diff = [mood, energy, health, focus, anxiety]
+	var diff = [mood, energy, health, focus, calmness]
 	for i in range(len(diff)):
 		diff[i] -= last_values[i]
 	return diff
