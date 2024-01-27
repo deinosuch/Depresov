@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_owed3")
-name = "Jerome"
+name = "Marenka"
 rights = true
 sprite = ExtResource("2_6gh08")
 negative_penalty = 1.5
