@@ -2,6 +2,7 @@ extends Control
 
 class_name level
 
+var level_data: LevelData
 var current_person
 var person_sprite
 var stats
@@ -43,13 +44,15 @@ func _update_stats(person : Person):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	level_data = get_node("/root/LevelData")
+	level_data.level = self
 	#person_sprite = $Person
 	stats = $ItemList
 	
 	current_person = ($Queue as PersonQueue).next()
 	#_show_person(current_person)
 	_show_stats(current_person)
-	
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
