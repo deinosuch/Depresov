@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/levels/level.gd" id="1_i0pye"]
 [ext_resource type="PackedScene" uid="uid://b1pds6iln6nae" path="res://resources/inventory_ui.tscn" id="2_fd0tv"]
-[ext_resource type="PackedScene" uid="uid://b1ksb5tmyshmo" path="res://People/queue.tscn" id="3_wlad1"]
+[ext_resource type="PackedScene" uid="uid://3vutjbu2rodw" path="res://People/queue.tscn" id="3_wlad1"]
 [ext_resource type="Resource" uid="uid://cjk8k78pe3fj3" path="res://People/ppl/jerome.tres" id="4_kviue"]
 [ext_resource type="Resource" uid="uid://dk6stoc3y581a" path="res://People/ppl/marenka.tres" id="5_lqtxh"]
 [ext_resource type="Script" path="res://scenes/levels/paralax_bg.gd" id="6_c4fji"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b6agsdhmwp342" path="res://ui/background/sky_bckg.png" id="6_pgmnf"]
 [ext_resource type="Texture2D" uid="uid://cls77stfh4mil" path="res://ui/background/game_screen_notexture.png" id="6_qxqqu"]
 [ext_resource type="Texture2D" uid="uid://bvd7yedmblw5k" path="res://ui/background/sky_clouds_small.png" id="7_jdka3"]
-[ext_resource type="Resource" uid="uid://bjbrcv7mvgij8" path="res://People/ppl/sadie.tres" id="7_vbc30"]
+[ext_resource type="Resource" path="res://People/ppl/sadie.tres" id="7_vbc30"]
 [ext_resource type="Texture2D" uid="uid://d0ydtwyu2atvl" path="res://ui/background/sky_clouds_big_floofy.png" id="9_urgf3"]
 
 [node name="Controller" type="Control"]

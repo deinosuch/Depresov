@@ -14,8 +14,10 @@ func _show_stats(person : Person):
 	for i in range(stat_names.size()):
 		var label = Label.new()
 		label.text = stat_names[i] + "      "
-		var bar = ProgressBar.new()
-		bar.custom_minimum_size = Vector2(100, 10)
+		var bar = TextureProgressBar.new()
+		bar.texture_progress = preload("res://ui/bar2_full.png")
+		bar.texture_under = preload("res://ui/bar2_empty.png")
+		
 		bar.value = stat_values[i]
 		stats.add_child(label)
 		stats.add_child(bar)
@@ -26,7 +28,7 @@ func _update_stats():
 	
 	for i in range(person_stats.size()):
 		var stat = stats.get_child(2*i + 1)
-		(stat as ProgressBar).value = person_stats[i]
+		(stat as TextureProgressBar).value = person_stats[i]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
