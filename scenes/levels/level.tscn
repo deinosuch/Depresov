@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/levels/level.gd" id="1_i0pye"]
 [ext_resource type="PackedScene" uid="uid://b1pds6iln6nae" path="res://resources/inventory_ui.tscn" id="2_fd0tv"]
 [ext_resource type="PackedScene" uid="uid://3vutjbu2rodw" path="res://People/queue.tscn" id="3_wlad1"]
-[ext_resource type="Resource" uid="uid://tw41kugyqesm" path="res://People/ppl/marenka.tres" id="4_kviue"]
+[ext_resource type="Resource" uid="uid://tw41kugyqesm" path="res://People/ppl/jerome.tres" id="4_kviue"]
 
 [node name="Controller" type="Control"]
 layout_mode = 3
