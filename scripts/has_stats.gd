@@ -8,7 +8,7 @@ class_name HasStats
 @export var hunger = 100
 @export var anxiety = 100
 
-static var stat_names = ["happiness", "energy", "health", "hunger", "anxiety"]
+static var stat_names = ["Happiness", "Energy", "Health", "Hunger", "Anxiety"]
 
 func get_stats():
 	return [happiness, energy, health, hunger, anxiety]
