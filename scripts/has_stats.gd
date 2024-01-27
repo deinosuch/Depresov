@@ -1,12 +1,12 @@
 extends Resource
 
 class_name HasStats
-
-@export var mood = 100
-@export var energy = 100
-@export var health = 100
-@export var focus = 100
-@export var calmness = 100
+const base_level = 0
+@export var mood = base_level
+@export var energy = base_level
+@export var health = base_level
+@export var focus = base_level
+@export var calmness = base_level
 
 static var stat_names = ["Mood", "Energy", "Health", "Focus", "Calmness"]
 
