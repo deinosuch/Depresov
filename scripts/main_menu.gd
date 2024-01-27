@@ -11,11 +11,13 @@ func _process(delta):
 	pass
 
 
-func _on_quit_pressed():
-	get_tree().quit()
-	pass # Replace with function body.
+func _on_start_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			get_tree().change_scene_to_file("res://scenes/levels/level.tscn")
 
 
-func _on_start_pressed():
-	get_tree().change_scene_to_file("res://scenes/levels/level.tscn")
-	pass # Replace with function body.
+func _on_quit_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+				get_tree().quit()

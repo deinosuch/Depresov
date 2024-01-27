@@ -12,26 +12,7 @@ const b = 15
 
 @onready var game = get_node("/root/GameData") 
 
-func _show_stats(person : Person):
-	# Set up stats
-	var stat_names = person.stat_names
-	var stat_values = person.get_stats()
-	for i in range(stat_names.size()):
-		var label = Label.new()
-		label.text = stat_names[i] + "      "
-		var bar = ProgressBar.new()
-		bar.custom_minimum_size = Vector2(100, 10)
-		bar.value = stat_values[i]
-		stats.add_child(label)
-		stats.add_child(bar)
-
-func _update_stats():
-	if current_person == null: return # idk man, it works now
-	var person_stats = current_person.get_stats()
-	
-	for i in range(person_stats.size()):
-		var stat = stats.get_child(2*i + 1)
-		(stat as ProgressBar).value = person_stats[i]
+@onready var stat_bar = $StatBar
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -45,7 +26,8 @@ func _ready():
 		current_person.reset_to_default()
 		current_person.add_array_to_stats(get_random_stat_in_span())
 	current_person.update_last_val()
-	_show_stats(current_person)
+	stat_bar.initialize()
+	#_show_stats(current_person)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -80,4 +62,4 @@ func _on_button_pressed():
 		current_person.add_array_to_stats(get_random_stat_in_span())
 	
 	current_person.update_last_val()
-	_update_stats()
+	stat_bar.update()

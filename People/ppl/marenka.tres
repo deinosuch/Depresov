@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://dk6stoc3y581a"]
+[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://cwxgua15att41"]
 
 [ext_resource type="Script" path="res://scripts/person.gd" id="1_ft2d5"]
 [ext_resource type="Texture2D" uid="uid://cohmkvycrppyk" path="res://ui/people/marenka.png" id="2_xyjrp"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://n53bjtjry0gx"]
+
+[ext_resource type="Script" path="res://resources/stat_bar_ui.gd" id="1_f2g6h"]
+[ext_resource type="PackedScene" uid="uid://3sgsxy4dyciu" path="res://resources/progress_bar_ui.tscn" id="1_sjevm"]
+
+[node name="StatBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_f2g6h")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+offset_right = 600.0
+offset_bottom = 200.0
+columns = 2
+
+[node name="ProgressBarUI" parent="GridContainer" instance=ExtResource("1_sjevm")]
+layout_mode = 2
