@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://dk6stoc3y581a"]
+[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://cwxgua15att41"]
 
 [ext_resource type="Script" path="res://scripts/person.gd" id="1_ft2d5"]
 
@@ -11,8 +11,8 @@ name = "Marenka"
 rights = true
 sprite = SubResource("CompressedTexture2D_legna")
 negative_penalty = 1.5
-happiness = 100
+mood = 100
 energy = 100
-health = 100
-hunger = 100
-anxiety = 100
+health = 0
+focus = 0
+calmness = 0

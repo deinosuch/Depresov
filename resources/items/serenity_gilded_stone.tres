@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cn03c4y35f36i"]
-
-[ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_xv7y4"]
-
-[resource]
-script = ExtResource("1_xv7y4")
-name = "Serenity Gilded Stone"

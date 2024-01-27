@@ -7,6 +7,6 @@ class_name Inventory
 
 func add(item : Item, amount : int):
 	for slut in items:
-		if slut.item == item:
+		if slut and slut.item == item:
 			slut.amount += amount
 			break
