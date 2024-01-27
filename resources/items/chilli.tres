@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cpg8vqb86pw5g"]
+
+[ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_wousq"]
+
+[resource]
+script = ExtResource("1_wousq")
+name = "Chilli Pepper"
+price = 10
+mood = 0
+energy = 0
+health = 0
+focus = 0
+calmness = 0

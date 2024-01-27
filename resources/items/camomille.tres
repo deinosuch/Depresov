@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bhw3i0qxtg245"]
+
+[ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_a02a5"]
+
+[resource]
+script = ExtResource("1_a02a5")
+name = "Camomille"
+price = 10
+mood = 0
+energy = 0
+health = 0
+focus = 0
+calmness = 0
