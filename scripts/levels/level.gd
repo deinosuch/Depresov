@@ -2,8 +2,7 @@ extends Control
 
 class_name level
 
-var first_person : Person = preload("res://People/jerome.tres")
-var second_person : Person = preload("res://People/marenka.tres")
+var current_person
 var person_sprite
 var stats
 
@@ -43,11 +42,12 @@ func _update_stats(person : Person):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	person_sprite = $Person
+	#person_sprite = $Person
 	stats = $ItemList
 	
-	_show_person(first_person)
-	_show_stats(first_person)
+	current_person = ($Queue as PersonQueue).next()
+	#_show_person(current_person)
+	_show_stats(current_person)
 	
 
 
@@ -57,5 +57,5 @@ func _process(delta):
 	
 
 func _on_button_pressed():
-	_show_person(second_person)
-	_update_stats(second_person)
+	current_person = ($Queue as PersonQueue).next()
+	_update_stats(current_person)
