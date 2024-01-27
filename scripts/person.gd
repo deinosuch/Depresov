@@ -31,6 +31,10 @@ func add_stats(object : HasStats):
 	#update_last_val()
 	ResourceSaver.save(self)
 
+func get_metrics():
+	var diff = get_difference()
+	return [get_money_gain(diff), get_happy_gain(diff)]
+
 func get_money_gain(diff):
 	var sum = 0
 	for i in range(len(diff)):

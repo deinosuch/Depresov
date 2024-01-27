@@ -5,6 +5,7 @@ class_name level
 var current_person
 var queue : PersonQueue
 var stats
+@onready var game = get_node("/root/GameData") 
 
 func _show_stats(person : Person):
 	# Set up stats
@@ -29,7 +30,6 @@ func _update_stats():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var game = get_node("/root/GameData")
 	game.current_level = self
 	#person_sprite = $Person
 	stats = $ItemList
@@ -37,13 +37,16 @@ func _ready():
 	current_person = queue.next()
 	current_person.update_last_val()
 	_show_stats(current_person)
-	# Call update functions for metrics after person has been dealt with
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 func _on_button_pressed():
+	# Call update functions for metrics after person has been dealt with
+	var metrics = current_person.get_metrics()
+	game.update_metrics(metrics[0], metrics[1])
+	# load next person
 	current_person = queue.next()
 	current_person.update_last_val()
 	_update_stats()
