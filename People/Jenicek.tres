@@ -7,9 +7,11 @@
 script = ExtResource("1_w0pd6")
 name = "Jenicek"
 rights = true
-happiness = 100
-energy = 100
-health = 100
-hunger = 100
-anxiety = 100
+stats = {
+"anxiety": 100,
+"energy": 100,
+"happiness": 0,
+"health": 100,
+"hunger": 50
+}
 sprite = ExtResource("2_h1742")

@@ -11,4 +11,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i0pye")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Person" type="Sprite2D" parent="."]
+
+[node name="ItemList" type="GridContainer" parent="."]
+layout_mode = 1
+offset_right = 400.0
+offset_bottom = 263.0
+columns = 2
