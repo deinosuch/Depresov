@@ -2,6 +2,7 @@ extends Control
 
 class_name level
 
+var level_data: LevelData
 var current_person
 var queue : PersonQueue
 var stats
@@ -29,6 +30,9 @@ func _update_stats():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	level_data = get_node("/root/LevelData")
+	level_data.level = self
+	#person_sprite = $Person
 	stats = $ItemList
 	queue = $Queue as PersonQueue
 	current_person = queue.next()
