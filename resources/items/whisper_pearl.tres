@@ -1,7 +1,14 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bert0w1i3x58i"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bert0w1i3x58i"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_kb3xs"]
+[ext_resource type="Texture2D" uid="uid://5ti1o5lwqaok" path="res://ui/items/pearl.png" id="2_qew62"]
 
 [resource]
 script = ExtResource("1_kb3xs")
 name = "Whisper Pearl"
+texture = ExtResource("2_qew62")
+happiness = 100
+energy = 100
+health = 100
+hunger = 100
+anxiety = 100

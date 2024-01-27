@@ -1,7 +1,14 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://3r84la51wfa"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://3r84la51wfa"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_kpd4v"]
+[ext_resource type="Texture2D" uid="uid://c6fbudvv2v0t6" path="res://ui/items/spark.png" id="2_xbhr1"]
 
 [resource]
 script = ExtResource("1_kpd4v")
 name = "Spark of Harmony"
+texture = ExtResource("2_xbhr1")
+happiness = 100
+energy = 100
+health = 100
+hunger = 100
+anxiety = 100

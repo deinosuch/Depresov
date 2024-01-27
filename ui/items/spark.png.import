@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4oag8x33igwj"
-path="res://.godot/imported/game_screen_notexture.png-e5ff2461a67bb343327908ff7008f669.ctex"
+uid="uid://c6fbudvv2v0t6"
+path="res://.godot/imported/spark.png-5dbb74abb08f68a9c3a78d6aa48e75fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/people/game_screen_notexture.png"
-dest_files=["res://.godot/imported/game_screen_notexture.png-e5ff2461a67bb343327908ff7008f669.ctex"]
+source_file="res://ui/items/spark.png"
+dest_files=["res://.godot/imported/spark.png-5dbb74abb08f68a9c3a78d6aa48e75fe.ctex"]
 
 [params]
 

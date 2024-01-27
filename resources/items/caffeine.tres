@@ -1,14 +1,12 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dmpx5itvm1tq5"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_ydefh"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sa17a"]
-size = Vector2(30, 30)
+[ext_resource type="Texture2D" uid="uid://lwlhcityuqoi" path="res://ui/items/coffee.png" id="2_tx8gx"]
 
 [resource]
 script = ExtResource("1_ydefh")
 name = "Caffeine"
-texture = SubResource("PlaceholderTexture2D_sa17a")
+texture = ExtResource("2_tx8gx")
 happiness = 100
 energy = 100
 health = 100

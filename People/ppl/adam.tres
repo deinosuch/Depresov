@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://brfd3uj2ljkeg"]
+
+[ext_resource type="Script" path="res://scripts/person.gd" id="1_s0loi"]
+[ext_resource type="Texture2D" uid="uid://7vbfy6mjumva" path="res://ui/people/adam.png" id="2_at1ts"]
+
+[resource]
+script = ExtResource("1_s0loi")
+name = "Adam"
+rights = true
+sprite = ExtResource("2_at1ts")
+negative_penalty = 1.5
+happiness = 100
+energy = 100
+health = 0
+hunger = 0
+anxiety = 100
