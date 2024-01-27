@@ -31,4 +31,43 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 expand_mode = 1
 
+[node name="CountPanel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -35.0
+offset_bottom = 35.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="Count" type="Label" parent="CountPanel"]
+layout_mode = 0
+offset_right = 23.0
+offset_bottom = 23.0
+scale = Vector2(1.5, 1.5)
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="StatPanel" type="Panel" parent="."]
+z_index = 1
+layout_mode = 2
+offset_left = 23.0
+offset_top = -123.0
+offset_right = 145.0
+offset_bottom = 7.0
+
+[node name="StatSheet" type="GridContainer" parent="StatPanel"]
+layout_mode = 0
+offset_right = 121.0
+offset_bottom = 130.0
+
+[node name="Stat" type="Label" parent="StatPanel/StatSheet"]
+layout_mode = 2
+
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
