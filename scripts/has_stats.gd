@@ -10,7 +10,7 @@ class_name HasStats
 
 static var stat_names = ["Happiness", "Energy", "Health", "Hunger", "Anxiety"]
 
-func get_stats():
+func get_stats():	
 	return [happiness, energy, health, hunger, anxiety]
 
 func add_stats(object : HasStats):

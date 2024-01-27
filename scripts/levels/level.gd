@@ -45,5 +45,7 @@ func _process(delta):
 
 func _on_button_pressed():
 	current_person = queue.next()
+	if(current_person == null):
+		return
 	current_person.update_last_val()
 	_update_stats()
