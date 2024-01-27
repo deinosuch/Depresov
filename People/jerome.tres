@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://tw41kugyqesm"]
+[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://cgudwbtj7owu7"]
 
 [ext_resource type="Script" path="res://scripts/person.gd" id="1_owed3"]
 [ext_resource type="Texture2D" uid="uid://cbmgyrsgc3feo" path="res://People/jerome.png" id="2_6gh08"]
@@ -7,11 +7,9 @@
 script = ExtResource("1_owed3")
 name = "Marenka"
 rights = true
-stats = {
-"anxiety": 100,
-"energy": 100,
-"happiness": 100,
-"health": 100,
-"hunger": 100
-}
 sprite = ExtResource("2_6gh08")
+happiness = 100
+energy = 100
+health = 100
+hunger = 100
+anxiety = 100
