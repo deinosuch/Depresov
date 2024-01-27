@@ -3,7 +3,7 @@ extends Node
 var current_level: level
 var inventory: Inventory = null
 var first_rodeo = true
-
+var bar
 # metrics
 var money = 1000
 var global_happiness = 5000

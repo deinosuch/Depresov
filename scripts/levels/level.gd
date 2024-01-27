@@ -63,11 +63,11 @@ func get_stat_dec():
 		dec[i] *= -1
 	return dec
 
-
 func _on_button_pressed():
 	# Call update functions for metrics after person has been dealt with
 	var metrics = current_person.get_metrics()
 	game.update_metrics(metrics[0], metrics[1])
+	game.bar.update()
 	#     decrease stats for next round
 	current_person.add_array_to_stats(get_stat_dec())
 	# load next person

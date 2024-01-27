@@ -29,6 +29,7 @@ func _on_button_pressed():
 	game_state.money -= total_price
 	total_price = 0
 	# increase day counter
+	game_state.bar.update()
 	game_state.increase_day_count()
 	get_tree().change_scene_to_file("res://scenes/levels/level.tscn")
 

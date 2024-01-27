@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmnp4hcv1phxd"]
+[gd_scene load_steps=5 format=3 uid="uid://dtxjf14fg2vbm"]
 
 [ext_resource type="Script" path="res://scenes/ui_bar.gd" id="1_ra8r3"]
 [ext_resource type="Texture2D" uid="uid://dk5ktvgj86hdw" path="res://ui/horni_lista.png" id="2_js14y"]
@@ -48,6 +48,19 @@ offset_right = 1022.0
 offset_bottom = 35.0
 scale = Vector2(1.5, 1.5)
 text = "1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_direction = 2
+
+[node name="Label2" type="Label" parent="NinePatchRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 51.0001
+offset_top = 1.0
+offset_right = 159.0
+offset_bottom = 36.0
+scale = Vector2(1.5, 1.5)
+text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 text_direction = 2
