@@ -1,7 +1,14 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bwfbq34br5qgx"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bwfbq34br5qgx"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_0c7ma"]
+[ext_resource type="Texture2D" uid="uid://p01lbn6gdq74" path="res://ui/items/stardust.png" id="2_uq14g"]
 
 [resource]
 script = ExtResource("1_0c7ma")
 name = "Star Dust"
+texture = ExtResource("2_uq14g")
+happiness = 100
+energy = 100
+health = 100
+hunger = 100
+anxiety = 100

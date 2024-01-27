@@ -1,7 +1,14 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cpiiqxiabncmb"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cpiiqxiabncmb"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_4fvj4"]
+[ext_resource type="Texture2D" uid="uid://doh3o011qs0mr" path="res://ui/items/radiant_laughter.png" id="2_qoa78"]
 
 [resource]
 script = ExtResource("1_4fvj4")
 name = "Radiant Laughter Elixir"
+texture = ExtResource("2_qoa78")
+happiness = 100
+energy = 100
+health = 100
+hunger = 100
+anxiety = 100
