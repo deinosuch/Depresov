@@ -12,3 +12,11 @@ func update():
 	$NinePatchRect/TextureProgressBar.value = game_data.global_happiness
 	$NinePatchRect/Label.text = str(game_data.money)
 	$NinePatchRect/Label2.text = "day #" + str(game_data.current_day)
+
+func format_money(amount):
+	var text = ""
+	if amount < 0:
+		text = "- "
+	text = text + str(abs(amount))
+	print(text)
+	return text
