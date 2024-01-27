@@ -5,9 +5,11 @@ class_name Person
 # Persons stats
 @export var name : String = ""
 @export var rights : bool = true
-@export var happiness : int = 100
-@export var energy : int = 100
-@export var health : int = 100
-@export var hunger : int = 100
-@export var anxiety : int = 100
-
+@export var stats = {
+	"happiness" : 100,
+	"energy" : 100,
+	"health" : 100, 
+	"hunger" : 100,
+	"anxiety" : 100
+}
+@export var sprite : Texture2D
