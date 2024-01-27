@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbi0pgpij1430"
-path="res://.godot/imported/stickman.png-b147784f675c082f0bb288fe000494f8.ctex"
+uid="uid://cbmgyrsgc3feo"
+path="res://.godot/imported/jerome.png-0160ae4fc9393ff0855d0d85422321d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://People/stickman.png"
-dest_files=["res://.godot/imported/stickman.png-b147784f675c082f0bb288fe000494f8.ctex"]
+source_file="res://People/jerome.png"
+dest_files=["res://.godot/imported/jerome.png-0160ae4fc9393ff0855d0d85422321d2.ctex"]
 
 [params]
 

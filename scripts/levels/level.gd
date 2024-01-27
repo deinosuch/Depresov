@@ -1,7 +1,7 @@
 extends Control
 
-var first_person : Person = preload("res://People/Jenicek.tres")
-var second_person : Person = preload("res://People/new_resource.tres")
+var first_person : Person = preload("res://People/jerome.tres")
+var second_person : Person = preload("res://People/marenka.tres")
 var person_sprite
 var stats
 
@@ -13,7 +13,7 @@ func _show_person(person : Person):
 	
 	# Set persons size
 	person_sprite.texture = person.sprite
-	var desired_width = screen_size.x / 3
+	var desired_width = screen_size.x / 5
 	var original_width = person.sprite.get_width()
 	var scale_factor = desired_width / original_width
 	person_sprite.scale.x = scale_factor
