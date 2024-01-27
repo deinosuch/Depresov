@@ -1,4 +1,4 @@
-extends Resource
+extends HasStats
 
 
 class_name Item
