@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Person" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://tw41kugyqesm"]
 
 [ext_resource type="Script" path="res://scripts/person.gd" id="1_ft2d5"]
 
