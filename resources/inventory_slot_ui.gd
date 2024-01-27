@@ -1,6 +1,6 @@
 extends Panel
 
-@onready var level: LevelData = get_node("/root/LevelData")
+@onready var game: GameData = get_node("/root/GameData")
 
 @onready var texture: TextureRect = $CenterContainer/TextureRect
 var slot: Slot
@@ -21,7 +21,7 @@ func _on_gui_input(event):
 		
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			slot.item.use(level.level.current_person)
+			slot.item.use(game.current_level.current_person)
 			slot.amount -= 1
-			level.level._update_stats()
+			game.current_level._update_stats()
 			update()
