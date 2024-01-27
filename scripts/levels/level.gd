@@ -5,10 +5,10 @@ class_name level
 var current_person
 var queue : PersonQueue
 var stats
+var rng
 # constants, span a to b
 const a = 5
 const b = 15
-var rng
 
 @onready var game = get_node("/root/GameData") 
 
@@ -41,6 +41,7 @@ func _ready():
 	stats = $ItemList
 	queue = $Queue as PersonQueue
 	current_person = queue.next()
+	if game.first_rodeo: current_person.reset_to_default()
 	current_person.update_last_val()
 	_show_stats(current_person)
 
@@ -49,7 +50,7 @@ func _process(delta):
 	pass
 
 func get_stat_dec():
-	var dec = [0,0,0,0,0]	
+	var dec = [0,0,0,0,0]
 	for i in range(len(dec)):
 		dec[i] = -rng.randf_range(a,b)
 	return dec
@@ -63,6 +64,8 @@ func _on_button_pressed():
 	# load next person
 	current_person = queue.next()
 	if(current_person == null):
+		game.first_rodeo = false
 		return
+	if game.first_rodeo: current_person.reset_to_default()
 	current_person.update_last_val()
 	_update_stats()
