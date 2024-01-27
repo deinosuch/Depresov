@@ -24,7 +24,7 @@ columns = 2
 
 [node name="Inventory UI" parent="." instance=ExtResource("2_fd0tv")]
 layout_mode = 1
-offset_top = -295.0
+offset_top = -222.0
 offset_right = 0.0
 offset_bottom = 0.0
 
