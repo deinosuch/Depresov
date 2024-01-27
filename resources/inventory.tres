@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://c8yruq645fojc" path="res://resources/items/chocolate.tres" id="5_xwmgq"]
 [ext_resource type="Resource" uid="uid://cpg8vqb86pw5g" path="res://resources/items/chilli.tres" id="6_3hrdh"]
 [ext_resource type="Resource" uid="uid://dpsfwxnqtryg6" path="res://resources/items/essence_of_dance.tres" id="6_3ogcc"]
-[ext_resource type="Resource" path="res://resources/items/pill.tres" id="7_wmyr2"]
+[ext_resource type="Resource" uid="uid://bg0nopy2u5heg" path="res://resources/items/pill.tres" id="7_wmyr2"]
 [ext_resource type="Resource" uid="uid://cpiiqxiabncmb" path="res://resources/items/radiant_laughter.tres" id="8_l4nui"]
 [ext_resource type="Resource" uid="uid://cwxcdmqlbveg2" path="res://resources/items/ginger.tres" id="9_6smrw"]
 [ext_resource type="Resource" uid="uid://3r84la51wfa" path="res://resources/items/spark_harmony.tres" id="9_vkq66"]
