@@ -1,17 +1,17 @@
-[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://bt2uxuplvx12t"]
+[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://tw41kugyqesm"]
 
-[ext_resource type="Script" path="res://scripts/person.gd" id="1_w0pd6"]
-[ext_resource type="Texture2D" uid="uid://bkrom7djkagmi" path="res://People/character1.png" id="2_g0t6m"]
+[ext_resource type="Script" path="res://scripts/person.gd" id="1_ft2d5"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_legna"]
+load_path = "res://.godot/imported/character1.png-97c5a4a35b0226a708c80c5c39894c02.ctex"
 
 [resource]
-script = ExtResource("1_w0pd6")
+script = ExtResource("1_ft2d5")
 name = "Jenicek"
 rights = true
-stats = {
-"anxiety": 100,
-"energy": 100,
-"happiness": 0,
-"health": 100,
-"hunger": 50
-}
-sprite = ExtResource("2_g0t6m")
+sprite = SubResource("CompressedTexture2D_legna")
+happiness = 100
+energy = 100
+health = 50
+hunger = 100
+anxiety = 100

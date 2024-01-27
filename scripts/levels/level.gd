@@ -21,25 +21,23 @@ func _show_person(person : Person):
 
 func _show_stats(person : Person):
 	# Set up stats
-	for stat_name in person.stats.keys():
+	var stat_names = person.stat_names
+	var stat_values = person.get_stats()
+	for i in range(stat_names.size()):
 		var label = Label.new()
-		label.text = stat_name + "      "
+		label.text = stat_names[i] + "      "
 		var bar = ProgressBar.new()
 		bar.custom_minimum_size = Vector2(100, 10)
-		bar.value = person.stats[stat_name]
+		bar.value = stat_values[i]
 		stats.add_child(label)
 		stats.add_child(bar)
 
 func _update_stats(person : Person):
-	var current_stat
-	for stat_index in range(stats.get_child_count()):
-		var stat = stats.get_child(stat_index)
+	var person_stats = person.get_stats()
+	for i in range(person_stats.size()):
 		
-		if stat is Label:
-			current_stat = (stat as Label).text.strip_edges()
-			continue
-		
-		(stat as ProgressBar).value = person.stats[current_stat]
+		var stat = stats.get_child(2*i + 1)
+		(stat as ProgressBar).value = person_stats[i]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
