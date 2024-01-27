@@ -35,7 +35,9 @@ func _ready():
 	stats = $ItemList
 	queue = $Queue as PersonQueue
 	current_person = queue.next()
+	current_person.update_last_val()
 	_show_stats(current_person)
+	# Call update functions for metrics after person has been dealt with
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -43,4 +45,5 @@ func _process(delta):
 
 func _on_button_pressed():
 	current_person = queue.next()
+	current_person.update_last_val()
 	_update_stats()
