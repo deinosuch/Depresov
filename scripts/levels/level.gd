@@ -1,5 +1,7 @@
 extends Control
 
+class_name level
+
 var first_person : Person = preload("res://People/jerome.tres")
 var second_person : Person = preload("res://People/marenka.tres")
 var person_sprite
@@ -54,7 +56,6 @@ func _process(delta):
 	pass
 	
 
-
-func _on_timer_timeout():
+func _on_button_pressed():
 	_show_person(second_person)
 	_update_stats(second_person)
