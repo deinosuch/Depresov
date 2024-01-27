@@ -35,3 +35,10 @@ func _on_button_pressed():
 func add_to_total(amount : int):
 	total_price += amount
 	total_price_label.text = str(total_price)
+
+func _unhandled_key_input(event):
+	if event.pressed and event.keycode == KEY_ESCAPE:
+		$Pause.show()
+
+func unpause():
+	$Pause.hide()

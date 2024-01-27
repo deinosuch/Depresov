@@ -81,3 +81,10 @@ func _on_button_pressed():
 	
 	current_person.update_last_val()
 	_update_stats()
+
+func _unhandled_key_input(event):
+	if event.pressed and event.keycode == KEY_ESCAPE:
+		$Pause.show()
+
+func unpause():
+	$Pause.hide()
