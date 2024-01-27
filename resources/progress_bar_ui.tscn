@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://3sgsxy4dyciu"]
+
+[ext_resource type="Script" path="res://resources/progress_bar.gd" id="1_ev0om"]
+[ext_resource type="Texture2D" uid="uid://gk4f0w8b60dn" path="res://ui/bar2_empty.png" id="2_8oj23"]
+[ext_resource type="Texture2D" uid="uid://eeii41eu7ffn" path="res://ui/bar2_full.png" id="3_btg8d"]
+
+[node name="ProgressBarUI" type="Panel"]
+custom_minimum_size = Vector2(325, 25)
+offset_right = 325.0
+offset_bottom = 25.0
+script = ExtResource("1_ev0om")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.470588)
+custom_minimum_size = Vector2(325, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -162.5
+offset_top = -12.5
+offset_right = 162.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="NinePatchRect"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -162.5
+offset_top = -12.5
+offset_right = 487.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture_over = ExtResource("2_8oj23")
+texture_progress = ExtResource("3_btg8d")

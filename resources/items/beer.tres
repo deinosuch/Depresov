@@ -5,8 +5,9 @@
 [resource]
 script = ExtResource("1_1w2ic")
 name = "Pivko"
+price = 10
 happiness = 100
 energy = -1
 health = -30
-hunger = 20
-anxiety = -100
+hunger = 100
+anxiety = 100

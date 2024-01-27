@@ -7,8 +7,9 @@
 script = ExtResource("1_bhvlh")
 name = "Dark Chocolate"
 texture = ExtResource("2_ojkui")
-happiness = 10
+price = 10
+happiness = 100
 energy = 5
 health = -10
-hunger = -10
-anxiety = 5
+hunger = 100
+anxiety = 100

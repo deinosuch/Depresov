@@ -1,17 +1,18 @@
-[gd_scene load_steps=13 format=3 uid="uid://cx0k0caxk5pk"]
+[gd_scene load_steps=14 format=3 uid="uid://cx0k0caxk5pk"]
 
 [ext_resource type="Script" path="res://scripts/levels/level.gd" id="1_i0pye"]
 [ext_resource type="PackedScene" uid="uid://b1pds6iln6nae" path="res://resources/inventory_ui.tscn" id="2_fd0tv"]
 [ext_resource type="PackedScene" uid="uid://3vutjbu2rodw" path="res://People/queue.tscn" id="3_wlad1"]
-[ext_resource type="Resource" uid="uid://cjk8k78pe3fj3" path="res://People/ppl/jerome.tres" id="4_kviue"]
-[ext_resource type="Resource" uid="uid://dk6stoc3y581a" path="res://People/ppl/marenka.tres" id="5_lqtxh"]
+[ext_resource type="Resource" path="res://People/ppl/jerome.tres" id="4_kviue"]
+[ext_resource type="Resource" uid="uid://cwxgua15att41" path="res://People/ppl/marenka.tres" id="5_lqtxh"]
 [ext_resource type="Script" path="res://scenes/levels/paralax_bg.gd" id="6_c4fji"]
-[ext_resource type="Resource" path="res://People/ppl/adam.tres" id="6_g1kgj"]
+[ext_resource type="Resource" uid="uid://dh0inm48mgbgb" path="res://People/ppl/adam.tres" id="6_g1kgj"]
 [ext_resource type="Texture2D" uid="uid://b6agsdhmwp342" path="res://ui/background/sky_bckg.png" id="6_pgmnf"]
 [ext_resource type="Texture2D" uid="uid://cls77stfh4mil" path="res://ui/background/game_screen_notexture.png" id="6_qxqqu"]
 [ext_resource type="Texture2D" uid="uid://bvd7yedmblw5k" path="res://ui/background/sky_clouds_small.png" id="7_jdka3"]
-[ext_resource type="Resource" path="res://People/ppl/sadie.tres" id="7_vbc30"]
+[ext_resource type="Resource" uid="uid://bjbrcv7mvgij8" path="res://People/ppl/sadie.tres" id="7_vbc30"]
 [ext_resource type="Texture2D" uid="uid://d0ydtwyu2atvl" path="res://ui/background/sky_clouds_big_floofy.png" id="9_urgf3"]
+[ext_resource type="PackedScene" uid="uid://n53bjtjry0gx" path="res://resources/stat_bar_ui.tscn" id="13_ga36s"]
 
 [node name="Controller" type="Control"]
 layout_mode = 3
@@ -22,11 +23,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i0pye")
 
-[node name="ItemList" type="GridContainer" parent="."]
+[node name="StatBar" parent="." instance=ExtResource("13_ga36s")]
 layout_mode = 1
-offset_right = 400.0
-offset_bottom = 263.0
-columns = 2
+offset_left = 20.0
+offset_top = 55.0
+offset_right = 20.0
+offset_bottom = 55.0
 
 [node name="InventoryUI" parent="." instance=ExtResource("2_fd0tv")]
 z_index = 10
@@ -93,5 +95,10 @@ z_index = -10
 position = Vector2(576, 324.5)
 scale = Vector2(0.601042, 0.602778)
 texture = ExtResource("6_qxqqu")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

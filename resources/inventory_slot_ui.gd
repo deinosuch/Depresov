@@ -34,7 +34,6 @@ func is_empty():
 	return !slot or slot.is_empty()
 
 func update():
-
 	if is_empty():
 		visible = false
 	else:
@@ -51,7 +50,7 @@ func _on_gui_input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			slot.item.use(game.current_level.current_person)
 			slot.amount -= 1
-			game.current_level._update_stats()
+			game.current_level.stat_bar.update()
 			update()
 
 
