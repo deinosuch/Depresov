@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmpafpo440inp"]
+[gd_scene load_steps=3 format=3 uid="uid://dmpafpo440inp"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_d3kki"]
+[ext_resource type="AudioStream" uid="uid://busy381j0tb62" path="res://audio/buben.wav" id="2_o522a"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -27,7 +28,11 @@ offset_right = 666.0
 offset_bottom = 260.0
 text = "Start"
 
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_o522a")
+autoplay = true
+
 [connection signal="pressed" from="Quit" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Start" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
