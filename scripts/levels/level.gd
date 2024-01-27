@@ -48,5 +48,7 @@ func _on_button_pressed():
 	game.update_metrics(metrics[0], metrics[1])
 	# load next person
 	current_person = queue.next()
+	if(current_person == null):
+		return
 	current_person.update_last_val()
 	_update_stats()

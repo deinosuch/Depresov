@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cohmkvycrppyk"
-path="res://.godot/imported/character1.png-97c5a4a35b0226a708c80c5c39894c02.ctex"
+uid="uid://cc7qojnn4qjx6"
+path="res://.godot/imported/sadie.png-df16c0d7f259d6d6d0e413fce4758603.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://People/character1.png"
-dest_files=["res://.godot/imported/character1.png-97c5a4a35b0226a708c80c5c39894c02.ctex"]
+source_file="res://ui/people/sadie.png"
+dest_files=["res://.godot/imported/sadie.png-df16c0d7f259d6d6d0e413fce4758603.ctex"]
 
 [params]
 

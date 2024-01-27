@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1pds6iln6nae"]
+[gd_scene load_steps=4 format=3 uid="uid://b1pds6iln6nae"]
 
 [ext_resource type="Script" path="res://resources/inventory_ui.gd" id="1_bue6y"]
-[ext_resource type="PackedScene" uid="uid://70lid0eqnt3x" path="res://resources/inventory_slot_ui.tscn" id="2_v63j7"]
+[ext_resource type="Texture2D" uid="uid://d27rfdfs6go0f" path="res://ui/items/worktable.png" id="2_dd5xt"]
+[ext_resource type="PackedScene" uid="uid://bkpe3qnl2knxt" path="res://resources/inventory_slot_ui.tscn" id="2_v63j7"]
 
 [node name="Inventory UI" type="Control"]
 layout_mode = 3
@@ -18,9 +19,9 @@ script = ExtResource("1_bue6y")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 516.0
-offset_bottom = 412.0
-draw_center = false
+offset_right = 917.0
+offset_bottom = 180.0
+texture = ExtResource("2_dd5xt")
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
 layout_mode = 1
@@ -29,19 +30,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -258.0
-offset_top = -206.0
-offset_right = 258.0
-offset_bottom = 206.0
+offset_left = -436.5
+offset_top = -76.0
+offset_right = 294.5
+offset_bottom = 78.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 5
+columns = 8
 
 [node name="InventorySlotUi" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
 layout_mode = 2
 
 [node name="InventorySlotUi2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
 layout_mode = 2
+mouse_filter = 1
 
 [node name="InventorySlotUi3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
 layout_mode = 2
@@ -83,16 +85,4 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="InventorySlotUi16" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
-layout_mode = 2
-
-[node name="InventorySlotUi17" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
-layout_mode = 2
-
-[node name="InventorySlotUi18" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
-layout_mode = 2
-
-[node name="InventorySlotUi19" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
-layout_mode = 2
-
-[node name="InventorySlotUi20" parent="NinePatchRect/GridContainer" instance=ExtResource("2_v63j7")]
 layout_mode = 2

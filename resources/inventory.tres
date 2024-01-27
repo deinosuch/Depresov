@@ -1,93 +1,129 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=25 format=3 uid="uid://vs30wvw83kp8"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=43 format=3 uid="uid://vs30wvw83kp8"]
 
 [ext_resource type="Resource" uid="uid://dmpx5itvm1tq5" path="res://resources/items/caffeine.tres" id="1_7ukij"]
 [ext_resource type="Script" path="res://scripts/inventory/inventory.gd" id="1_8v5ox"]
+[ext_resource type="Resource" uid="uid://rruoi5i4xich" path="res://resources/items/beer.tres" id="1_g120w"]
 [ext_resource type="Resource" uid="uid://c8yruq645fojc" path="res://resources/items/chocolate.tres" id="1_wa47g"]
 [ext_resource type="Script" path="res://scripts/inventory/slot.gd" id="2_u8rql"]
+[ext_resource type="Resource" uid="uid://c48vcapoth60e" path="res://resources/items/blissstone.tres" id="3_fiv0o"]
+[ext_resource type="Resource" uid="uid://qsokdec3pib8" path="res://resources/items/cheerstone.tres" id="5_ki1fw"]
+[ext_resource type="Resource" uid="uid://biau82h4llwg7" path="res://resources/items/dream_ore.tres" id="7_4smpq"]
+[ext_resource type="Resource" uid="uid://ct4vm2mgnei2g" path="res://resources/items/elation_ember.tres" id="8_n0hv6"]
+[ext_resource type="Resource" uid="uid://dpsfwxnqtryg6" path="res://resources/items/essence_of_dance.tres" id="9_37fe1"]
+[ext_resource type="Resource" uid="uid://dr2pqa33j8yd4" path="res://resources/items/gleamed_joy.tres" id="10_kas5a"]
+[ext_resource type="Resource" uid="uid://dpvwn44r1g441" path="res://resources/items/luminous_oasis.tres" id="11_diniy"]
+[ext_resource type="Resource" uid="uid://cvuq0w07b17qf" path="res://resources/items/lunar_mirage.tres" id="12_yotwp"]
+[ext_resource type="Resource" uid="uid://cpiiqxiabncmb" path="res://resources/items/radiant_laughter.tres" id="13_cmalj"]
+[ext_resource type="Resource" uid="uid://cn03c4y35f36i" path="res://resources/items/serenity_gilded_stone.tres" id="14_brybl"]
+[ext_resource type="Resource" uid="uid://sechb2cyore8" path="res://resources/items/solution_of_glee.tres" id="15_ejsxo"]
+[ext_resource type="Resource" uid="uid://3r84la51wfa" path="res://resources/items/spark_harmony.tres" id="16_ced7w"]
+[ext_resource type="Resource" uid="uid://bwfbq34br5qgx" path="res://resources/items/star_dust.tres" id="17_e3bkk"]
+[ext_resource type="Resource" uid="uid://dk4xix7ld103w" path="res://resources/items/strike_of_uplift.tres" id="18_efa86"]
+[ext_resource type="Resource" uid="uid://wnsrvl741m86" path="res://resources/items/water.tres" id="19_ad5rd"]
+[ext_resource type="Resource" uid="uid://ca0i1fnfmmpl1" path="res://resources/items/whimsy_liquid.tres" id="20_rdy67"]
+[ext_resource type="Resource" uid="uid://bert0w1i3x58i" path="res://resources/items/whisper_pearl.tres" id="21_li0ev"]
 
 [sub_resource type="Resource" id="Resource_oolry"]
 script = ExtResource("2_u8rql")
-item = ExtResource("1_wa47g")
+item = ExtResource("1_g120w")
 amount = 2
 
 [sub_resource type="Resource" id="Resource_cd8w7"]
 script = ExtResource("2_u8rql")
-item = ExtResource("1_7ukij")
+item = ExtResource("3_fiv0o")
 amount = 1
 
 [sub_resource type="Resource" id="Resource_f587v"]
 script = ExtResource("2_u8rql")
-amount = 0
+item = ExtResource("1_7ukij")
+amount = 1
 
 [sub_resource type="Resource" id="Resource_6ok4i"]
 script = ExtResource("2_u8rql")
-item = ExtResource("1_wa47g")
+item = ExtResource("5_ki1fw")
 amount = 5
 
 [sub_resource type="Resource" id="Resource_5lcis"]
 script = ExtResource("2_u8rql")
-amount = 0
+item = ExtResource("1_wa47g")
+amount = 20
 
 [sub_resource type="Resource" id="Resource_3uv80"]
 script = ExtResource("2_u8rql")
+item = ExtResource("7_4smpq")
 amount = 0
 
 [sub_resource type="Resource" id="Resource_bxe0s"]
 script = ExtResource("2_u8rql")
+item = ExtResource("8_n0hv6")
 amount = 0
 
 [sub_resource type="Resource" id="Resource_tdcq4"]
 script = ExtResource("2_u8rql")
+item = ExtResource("9_37fe1")
 amount = 0
 
 [sub_resource type="Resource" id="Resource_1aeev"]
 script = ExtResource("2_u8rql")
+item = ExtResource("10_kas5a")
 amount = 0
 
 [sub_resource type="Resource" id="Resource_sfkmq"]
 script = ExtResource("2_u8rql")
+item = ExtResource("11_diniy")
 amount = 0
 
 [sub_resource type="Resource" id="Resource_n2b1e"]
 script = ExtResource("2_u8rql")
+item = ExtResource("12_yotwp")
 amount = 0
 
 [sub_resource type="Resource" id="Resource_k7i1e"]
 script = ExtResource("2_u8rql")
-amount = 0
+item = ExtResource("13_cmalj")
+amount = 1
+
+[sub_resource type="Resource" id="Resource_iat4t"]
+script = ExtResource("2_u8rql")
+item = ExtResource("19_ad5rd")
+amount = 1
+
+[sub_resource type="Resource" id="Resource_d84xu"]
+script = ExtResource("2_u8rql")
+item = ExtResource("21_li0ev")
+amount = 1
 
 [sub_resource type="Resource" id="Resource_y0m87"]
 script = ExtResource("2_u8rql")
+item = ExtResource("14_brybl")
 amount = 0
 
 [sub_resource type="Resource" id="Resource_s53w2"]
 script = ExtResource("2_u8rql")
+item = ExtResource("15_ejsxo")
 amount = 0
 
 [sub_resource type="Resource" id="Resource_kesm5"]
 script = ExtResource("2_u8rql")
-amount = 0
+item = ExtResource("16_ced7w")
+amount = 1
 
 [sub_resource type="Resource" id="Resource_yxmer"]
 script = ExtResource("2_u8rql")
-amount = 0
+item = ExtResource("17_e3bkk")
+amount = 1
 
 [sub_resource type="Resource" id="Resource_arrxa"]
 script = ExtResource("2_u8rql")
-amount = 0
-
-[sub_resource type="Resource" id="Resource_iat4t"]
-script = ExtResource("2_u8rql")
+item = ExtResource("18_efa86")
 amount = 0
 
 [sub_resource type="Resource" id="Resource_hilc6"]
 script = ExtResource("2_u8rql")
-amount = 0
-
-[sub_resource type="Resource" id="Resource_d84xu"]
-script = ExtResource("2_u8rql")
+item = ExtResource("20_rdy67")
 amount = 0
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_8v5ox")
-items = Array[ExtResource("2_u8rql")]([SubResource("Resource_oolry"), SubResource("Resource_cd8w7"), SubResource("Resource_f587v"), SubResource("Resource_6ok4i"), SubResource("Resource_5lcis"), SubResource("Resource_3uv80"), SubResource("Resource_bxe0s"), SubResource("Resource_tdcq4"), SubResource("Resource_1aeev"), SubResource("Resource_sfkmq"), SubResource("Resource_n2b1e"), SubResource("Resource_k7i1e"), SubResource("Resource_y0m87"), SubResource("Resource_s53w2"), SubResource("Resource_kesm5"), SubResource("Resource_yxmer"), SubResource("Resource_arrxa"), SubResource("Resource_iat4t"), SubResource("Resource_hilc6"), SubResource("Resource_d84xu")])
+items = Array[ExtResource("2_u8rql")]([SubResource("Resource_oolry"), SubResource("Resource_cd8w7"), SubResource("Resource_f587v"), SubResource("Resource_6ok4i"), SubResource("Resource_5lcis"), SubResource("Resource_3uv80"), SubResource("Resource_bxe0s"), SubResource("Resource_tdcq4"), SubResource("Resource_1aeev"), SubResource("Resource_sfkmq"), SubResource("Resource_n2b1e"), SubResource("Resource_k7i1e"), SubResource("Resource_iat4t"), SubResource("Resource_d84xu"), SubResource("Resource_y0m87"), SubResource("Resource_s53w2"), SubResource("Resource_kesm5"), SubResource("Resource_yxmer"), SubResource("Resource_arrxa"), SubResource("Resource_hilc6")])
