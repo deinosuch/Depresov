@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ddx05in31b2lm"]
+
+[ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_7w72l"]
+[ext_resource type="Texture2D" uid="uid://bbacsd0nl6x0x" path="res://ui/items/pill3.png" id="2_n2iio"]
+
+[resource]
+script = ExtResource("1_7w72l")
+name = "Mysterious Pill"
+texture = ExtResource("2_n2iio")
+mood = 10
+energy = -2
+health = 0
+focus = 0
+calmness = 0
