@@ -7,7 +7,7 @@ class_name PersonQueue
 
 func next():
 	if(queue.size() == 0):
-		get_node("/root/GameData").goto("shop")
+		game.goto("shop")
 		return
 	var person = queue.pop_back()
 	$Person.texture = person.sprite
