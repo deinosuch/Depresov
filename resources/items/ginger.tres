@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cwxcdmqlbveg2"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dlqfr6vd01y5b"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_n3tqv"]
 [ext_resource type="Texture2D" uid="uid://6i24o51l828d" path="res://ui/items/ginger.png" id="2_8sip0"]
@@ -8,8 +8,8 @@ script = ExtResource("1_n3tqv")
 name = "Ginger"
 texture = ExtResource("2_8sip0")
 price = 10
-mood = 0
-energy = 0
-health = 0
+mood = -3
+energy = -5
+health = 10
 focus = 0
-calmness = 0
+calmness = -5

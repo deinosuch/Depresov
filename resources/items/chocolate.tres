@@ -11,5 +11,5 @@ price = 10
 mood = 0
 energy = 5
 health = -10
-focus = 0
+focus = 10
 calmness = 0

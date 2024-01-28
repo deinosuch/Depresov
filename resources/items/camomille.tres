@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bhw3i0qxtg245"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cseqyieuqi8f2"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_a02a5"]
 [ext_resource type="Texture2D" uid="uid://bl0hggxevejum" path="res://ui/items/camomille.png" id="2_vp4mv"]
@@ -9,7 +9,7 @@ name = "Camomille"
 texture = ExtResource("2_vp4mv")
 price = 10
 mood = 0
-energy = 0
-health = 0
+energy = -10
+health = 10
 focus = 0
-calmness = 0
+calmness = 5
