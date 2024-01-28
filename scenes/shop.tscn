@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d27rfdfs6go0f" path="res://ui/items/worktable.png" id="2_3ingu"]
 [ext_resource type="PackedScene" path="res://scenes/shop_item.tscn" id="3_1eqh0"]
 [ext_resource type="AudioStream" uid="uid://do2nlam7be7o3" path="res://audio/shop.wav" id="4_rm2b7"]
-[ext_resource type="PackedScene" path="res://scenes/ui_bar.tscn" id="5_nn7oi"]
+[ext_resource type="PackedScene" uid="uid://c0ho46do0ixp8" path="res://scenes/ui_bar.tscn" id="5_nn7oi"]
 [ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="5_r2f21"]
 [ext_resource type="Script" path="res://scenes/levels/paralax_bg.gd" id="7_0yeoc"]
 [ext_resource type="Texture2D" uid="uid://b6agsdhmwp342" path="res://ui/background/sky_bckg.png" id="8_345vh"]

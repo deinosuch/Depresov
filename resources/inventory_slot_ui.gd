@@ -52,6 +52,8 @@ func _on_gui_input(event):
 			slot.amount -= 1
 			game.current_level.stat_bar.update()
 			update()
+			
+			game.end_condition()
 
 
 func _on_mouse_entered():

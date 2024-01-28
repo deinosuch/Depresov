@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtxjf14fg2vbm"]
+[gd_scene load_steps=6 format=3 uid="uid://c0ho46do0ixp8"]
 
 [ext_resource type="Script" path="res://scenes/ui_bar.gd" id="1_ra8r3"]
 [ext_resource type="Texture2D" uid="uid://dk5ktvgj86hdw" path="res://ui/horni_lista.png" id="2_js14y"]
