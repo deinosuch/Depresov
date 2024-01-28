@@ -5,7 +5,7 @@ var inventory: Inventory = null
 var bar
 # metrics
 var money = 200
-var global_happiness = 1500
+var global_happiness = 1000
 var max_global_happiness
 var current_day = 0
 var people: Array[Person]
@@ -84,9 +84,14 @@ func goto(where):
 	elif where == "level":
 		get_tree().change_scene_to_file("res://scenes/levels/level.tscn")
 	elif where == "win":
-		print("WIN")
+		get_tree().change_scene_to_file("res://scenes/end_scenes/win.tscn")
 	elif where == "lose":
-		print("LOSE")
+		get_tree().change_scene_to_file("res://scenes/end_scenes/lose.tscn")
+	elif where == "main_menu":
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+func quit():
+	get_tree().quit()
 
 func next_day():
 	current_day += 1
