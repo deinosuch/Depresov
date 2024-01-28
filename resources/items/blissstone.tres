@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c48vcapoth60e"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c48vcapoth60e"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_vr7cd"]
 [ext_resource type="Texture2D" uid="uid://ddn05nafmnp0f" path="res://ui/items/blisstone.png" id="2_783n4"]
+[ext_resource type="AudioStream" uid="uid://datr67ixcur44" path="res://audio/items/blissstone.wav" id="2_tq7ed"]
 
 [resource]
 script = ExtResource("1_vr7cd")
 name = "Blissstone"
 texture = ExtResource("2_783n4")
 price = 8
+sound = ExtResource("2_tq7ed")
 mood = 0
 energy = -10
 health = 0

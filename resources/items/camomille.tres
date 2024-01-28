@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bhw3i0qxtg245"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bhw3i0qxtg245"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_a02a5"]
+[ext_resource type="AudioStream" uid="uid://baq6tu7aux1fv" path="res://audio/items/snailcrush.wav" id="2_i223h"]
 [ext_resource type="Texture2D" uid="uid://bl0hggxevejum" path="res://ui/items/camomille.png" id="2_vp4mv"]
 
 [resource]
@@ -8,6 +9,7 @@ script = ExtResource("1_a02a5")
 name = "Camomille"
 texture = ExtResource("2_vp4mv")
 price = 25
+sound = ExtResource("2_i223h")
 mood = 0
 energy = -5
 health = 2

@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bwfbq34br5qgx"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bwfbq34br5qgx"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_0c7ma"]
+[ext_resource type="AudioStream" uid="uid://bcm5q3yh8d3tf" path="res://audio/items/stardust.wav" id="2_oky5u"]
 [ext_resource type="Texture2D" uid="uid://p01lbn6gdq74" path="res://ui/items/stardust.png" id="2_uq14g"]
 
 [resource]
@@ -8,6 +9,7 @@ script = ExtResource("1_0c7ma")
 name = "Star Dust"
 texture = ExtResource("2_uq14g")
 price = 13
+sound = ExtResource("2_oky5u")
 mood = 0
 energy = 0
 health = -13

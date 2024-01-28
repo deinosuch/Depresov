@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cpiiqxiabncmb"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cpiiqxiabncmb"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_4fvj4"]
 [ext_resource type="Texture2D" uid="uid://doh3o011qs0mr" path="res://ui/items/radiant_laughter.png" id="2_qoa78"]
+[ext_resource type="AudioStream" uid="uid://udno53gssror" path="res://audio/items/water.wav" id="2_yc5ry"]
 
 [resource]
 script = ExtResource("1_4fvj4")
 name = "Radiant Laughter Elixir"
 texture = ExtResource("2_qoa78")
 price = 17
+sound = ExtResource("2_yc5ry")
 mood = 25
 energy = 5
 health = 3

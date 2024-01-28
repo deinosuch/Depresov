@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_dgp7v"]
 [ext_resource type="Texture2D" uid="uid://d27rfdfs6go0f" path="res://ui/items/worktable.png" id="2_3ingu"]
-[ext_resource type="PackedScene" uid="uid://c07by706dteba" path="res://scenes/shop_item.tscn" id="3_1eqh0"]
+[ext_resource type="PackedScene" path="res://scenes/shop_item.tscn" id="3_1eqh0"]
 [ext_resource type="AudioStream" uid="uid://do2nlam7be7o3" path="res://audio/shop.wav" id="4_rm2b7"]
-[ext_resource type="PackedScene" uid="uid://dtxjf14fg2vbm" path="res://scenes/ui_bar.tscn" id="5_nn7oi"]
-[ext_resource type="PackedScene" uid="uid://qo8dxnili1y3" path="res://scenes/pause_menu.tscn" id="5_r2f21"]
+[ext_resource type="PackedScene" uid="uid://c0ho46do0ixp8" path="res://scenes/ui_bar.tscn" id="5_nn7oi"]
+[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="5_r2f21"]
 [ext_resource type="Script" path="res://scenes/levels/paralax_bg.gd" id="7_0yeoc"]
 [ext_resource type="Texture2D" uid="uid://3n7x3tmdvfrm" path="res://ui/background/night/nightsky.png" id="8_25oln"]
 [ext_resource type="Texture2D" uid="uid://dkequ6w6k2pe" path="res://ui/background/night/nightsky_moon.png" id="9_ifajm"]

@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c8yruq645fojc"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c8yruq645fojc"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_bhvlh"]
+[ext_resource type="AudioStream" uid="uid://bpck8l3a75jmw" path="res://audio/items/crunch.wav" id="2_5tfqf"]
 [ext_resource type="Texture2D" uid="uid://dx3ogdqa4r8fl" path="res://ui/items/choco.png" id="2_ojkui"]
 
 [resource]
@@ -8,6 +9,7 @@ script = ExtResource("1_bhvlh")
 name = "Dark Chocolate"
 texture = ExtResource("2_ojkui")
 price = 8
+sound = ExtResource("2_5tfqf")
 mood = 15
 energy = 2
 health = -15

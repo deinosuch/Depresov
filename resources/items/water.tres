@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://wnsrvl741m86"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://wnsrvl741m86"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_3vt7f"]
+[ext_resource type="AudioStream" uid="uid://udno53gssror" path="res://audio/items/water.wav" id="2_5ee6q"]
 [ext_resource type="Texture2D" uid="uid://rp4g7pitrxrj" path="res://ui/items/water.png" id="2_l1ew3"]
 
 [resource]
@@ -8,6 +9,7 @@ script = ExtResource("1_3vt7f")
 name = "Spring Water"
 texture = ExtResource("2_l1ew3")
 price = 2
+sound = ExtResource("2_5ee6q")
 mood = 1
 energy = 1
 health = 3

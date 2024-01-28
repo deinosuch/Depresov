@@ -8,11 +8,15 @@ extends Panel
 @onready var stat: Label = $StatPanel/StatSheet/Stat
 @onready var stat_panel: Panel = $StatPanel
 
+@onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 var slot: Slot
 
 func initialize(slot: Slot):
 	stat_panel.visible = false
 	self.slot = slot
+	
+	audio_player.stream = slot.item.sound
+	
 	update()
 	
 	if is_empty():
@@ -51,6 +55,7 @@ func _on_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			slot.item.use(game.current_level.current_person)
+			audio_player.play()
 			slot.amount -= 1
 			game.current_level.stat_bar.update()
 			update()

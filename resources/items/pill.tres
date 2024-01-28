@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bg0nopy2u5heg"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bg0nopy2u5heg"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_7w72l"]
 [ext_resource type="Texture2D" uid="uid://bbacsd0nl6x0x" path="res://ui/items/pill3.png" id="2_n2iio"]
+[ext_resource type="AudioStream" uid="uid://c7vgcq7q26heh" path="res://audio/items/pill.wav" id="2_oe3sg"]
 
 [resource]
 script = ExtResource("1_7w72l")
 name = "Mysterious Pill"
 texture = ExtResource("2_n2iio")
 price = 200
+sound = ExtResource("2_oe3sg")
 mood = 30
 energy = 15
 health = 0
