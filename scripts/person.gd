@@ -7,6 +7,7 @@ class_name Person
 @export var rights : bool = true
 @export var sprite : Texture2D
 
+
 const negative_penalty : float =  1.5 #negative penalty multiplier
 const default_vals = [50,50,50,50,50]
 var last_values = [mood, energy, health, focus, calmness]

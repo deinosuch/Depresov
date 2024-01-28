@@ -18,11 +18,6 @@ func _ready():
 		if(i == 16):
 			break
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
 func _on_button_pressed():
 	if total_price > game_state.money:
 		return
@@ -30,8 +25,7 @@ func _on_button_pressed():
 	total_price = 0
 	# increase day counter
 	game_state.bar.update()
-	game_state.increase_day_count()
-	get_tree().change_scene_to_file("res://scenes/levels/level.tscn")
+	game_state.next_day()
 
 func add_to_total(amount : int):
 	total_price += amount
