@@ -7,9 +7,9 @@
 script = ExtResource("1_1w2ic")
 name = "Pivko"
 texture = ExtResource("2_6pwct")
-price = 10
-mood = 0
+price = 20
+mood = 15
 energy = 0
 health = -5
-focus = 0
+focus = -5
 calmness = 0

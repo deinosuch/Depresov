@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://6kxnulynxw35"]
+[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://vgqjihmqeo71"]
 
 [ext_resource type="Script" path="res://scripts/person.gd" id="1_05s42"]
 [ext_resource type="Texture2D" uid="uid://cc7qojnn4qjx6" path="res://ui/people/sadie.png" id="2_q7cyb"]
@@ -8,8 +8,8 @@ script = ExtResource("1_05s42")
 name = "Sadie"
 rights = true
 sprite = ExtResource("2_q7cyb")
-mood = 45.9722
-energy = 46.4943
-health = 17.6553
-focus = 46.4773
-calmness = 56.4381
+mood = 28.1369
+energy = 31.37
+health = 24.5449
+focus = 37.5399
+calmness = 46.5972

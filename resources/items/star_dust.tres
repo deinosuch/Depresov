@@ -7,9 +7,9 @@
 script = ExtResource("1_0c7ma")
 name = "Star Dust"
 texture = ExtResource("2_uq14g")
-price = 10
+price = 13
 mood = 0
-energy = 3
-health = -5
-focus = 0
+energy = 0
+health = -13
+focus = 16
 calmness = 0

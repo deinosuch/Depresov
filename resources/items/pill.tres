@@ -7,9 +7,9 @@
 script = ExtResource("1_7w72l")
 name = "Mysterious Pill"
 texture = ExtResource("2_n2iio")
-price = 10
-mood = 10
-energy = -2
+price = 200
+mood = 30
+energy = 15
 health = 0
-focus = 0
+focus = 7
 calmness = 0

@@ -7,9 +7,9 @@
 script = ExtResource("1_n3tqv")
 name = "Ginger"
 texture = ExtResource("2_8sip0")
-price = 10
-mood = 0
-energy = 0
-health = 0
-focus = 0
-calmness = 0
+price = 20
+mood = -2
+energy = 4
+health = 18
+focus = -1
+calmness = -10

@@ -7,9 +7,9 @@
 script = ExtResource("1_4fvj4")
 name = "Radiant Laughter Elixir"
 texture = ExtResource("2_qoa78")
-price = 10
-mood = 0
+price = 17
+mood = 25
 energy = 5
-health = 0
-focus = 0
-calmness = 0
+health = 3
+focus = -12
+calmness = -4

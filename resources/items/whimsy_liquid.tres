@@ -7,9 +7,9 @@
 script = ExtResource("1_joqxd")
 name = "Whimsy Liquid"
 texture = ExtResource("2_sh6q6")
-price = 10
-mood = 0
-energy = 5
+price = 40
+mood = 17
+energy = 8
 health = 0
-focus = 0
+focus = -12
 calmness = 0

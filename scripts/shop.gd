@@ -29,7 +29,6 @@ func _unhandled_key_input(event):
 func unpause():
 	$Pause.hide()
 
-
 func _on_nine_patch_rect_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:

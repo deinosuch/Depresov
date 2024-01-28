@@ -2,10 +2,9 @@ extends Node
 
 var current_level: level
 var inventory: Inventory = null
-var first_rodeo = true
 var bar
 # metrics
-var money = 1000
+var money = 200
 var global_happiness = 5000
 var current_day = 0
 var people: Array[Person]
@@ -22,7 +21,7 @@ func _ready():
 		
 func reset_person(person: Person):
 	person.reset_to_default()
-	person.add_array_to_stats(get_random_stat_in_span(5, 15))
+	person.add_array_to_stats(get_random_stat_in_span(-15, 15))
 	
 func get_random_stat_in_span(a, b):
 	var stat = [0,0,0,0,0]

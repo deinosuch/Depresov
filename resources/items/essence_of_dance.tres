@@ -7,9 +7,9 @@
 script = ExtResource("1_i2jor")
 name = "Essence of Dance"
 texture = ExtResource("2_8hmq5")
-price = 10
-mood = 0
-energy = -10
-health = 10
+price = 5
+mood = 10
+energy = -20
+health = 7
 focus = 0
 calmness = 0
