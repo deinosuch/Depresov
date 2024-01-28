@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bvd7yedmblw5k" path="res://ui/background/sky_clouds_small.png" id="3_thop4"]
 [ext_resource type="Texture2D" uid="uid://d0ydtwyu2atvl" path="res://ui/background/sky_clouds_big_floofy.png" id="4_ehvqo"]
 [ext_resource type="Texture2D" uid="uid://bw4n2ke4lhhp2" path="res://ui/background/sun.png" id="5_xnu6m"]
-[ext_resource type="Texture2D" uid="uid://b6250hmb8muie" path="res://ui/startscreen_button.png" id="6_bqn3h"]
+[ext_resource type="Texture2D" uid="uid://bj0bjibmn4elk" path="res://ui/startscreen_button.png" id="6_bqn3h"]
 [ext_resource type="Texture2D" uid="uid://qugkgay34vb8" path="res://ui/coin.png" id="7_7g7vx"]
 
 [node name="Win" type="Control"]

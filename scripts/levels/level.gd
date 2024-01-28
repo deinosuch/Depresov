@@ -13,6 +13,9 @@ const b = 15
 @onready var game: GameData = get_node("/root/GameData") 
 
 @onready var stat_bar = $StatBar
+@onready var tv = $TV
+
+@export var tv_faces: Array[Texture]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,11 +27,14 @@ func _ready():
 	current_person.update_last_val()
 	stat_bar.initialize()
 	game.bar.update()
+	
+	tv.texture = game.choose_tv_texture(tv_faces)
 
 func _on_button_pressed():
 	# Call update functions for metrics after person has been dealt with
 	var metrics = current_person.get_metrics()
 	game.update_metrics(metrics[0], metrics[1])
+	tv.texture = game.choose_tv_texture(tv_faces)
 	game.already_served += 1
 	game.bar.update()
 	#     decrease stats for next round

@@ -5,7 +5,7 @@ var inventory: Inventory = null
 var bar
 # metrics
 var money = 200
-var global_happiness = 1500
+var global_happiness = 1000
 var max_global_happiness
 var current_day = 0
 var people: Array[Person]
@@ -23,13 +23,19 @@ func get_people_left():
 	return get_people_count() - already_served
 	
 func _ready():
+	load_assets()
+		
+func load_assets():
+	load_people()
+	
+func load_people():
 	var dirname = "res://People/ppl/" 
 	var files = DirAccess.get_files_at(dirname)
 	for file in files:
 		var person = load(dirname + file)
 		people.append(person)
-		reset_person(person)
-		
+		reset_person(person) 
+	
 func reset_person(person: Person):
 	person.reset_to_default()
 	person.add_array_to_stats(get_random_stat_in_span(-15, 15))
@@ -48,9 +54,12 @@ func get_stat_dec():
 
 func update_metrics(mon, hap):
 	money += mon
-	global_happiness += hap
-	print(money)
-	print(global_happiness)
+	global_happiness = min(global_happiness + hap, max_global_happiness)
+	
+func choose_tv_texture(textures: Array[Texture]) -> Texture:
+	var interval_size = max_global_happiness / textures.size()
+	var i = max(0, min(floor(global_happiness / interval_size), textures.size() - 1))
+	return textures[i]
 	
 func check_lose():
 	if global_happiness <= 0:

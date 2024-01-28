@@ -1,57 +1,28 @@
-[gd_scene load_steps=25 format=3 uid="uid://cx0k0caxk5pk"]
+[gd_scene load_steps=24 format=3 uid="uid://cx0k0caxk5pk"]
 
 [ext_resource type="Script" path="res://scripts/levels/level.gd" id="1_i0pye"]
 [ext_resource type="PackedScene" uid="uid://b1pds6iln6nae" path="res://resources/inventory_ui.tscn" id="2_fd0tv"]
 [ext_resource type="PackedScene" uid="uid://3vutjbu2rodw" path="res://People/queue.tscn" id="3_wlad1"]
-[ext_resource type="Resource" path="res://People/ppl/jerome.tres" id="4_kviue"]
-[ext_resource type="Resource" path="res://People/ppl/marenka.tres" id="5_lqtxh"]
+[ext_resource type="Resource" uid="uid://dseqirhw7sjaa" path="res://People/ppl/jerome.tres" id="4_kviue"]
+[ext_resource type="Resource" uid="uid://nh724idkx5hp" path="res://People/ppl/marenka.tres" id="5_lqtxh"]
 [ext_resource type="Script" path="res://scenes/levels/paralax_bg.gd" id="6_c4fji"]
-[ext_resource type="Resource" path="res://People/ppl/adam.tres" id="6_g1kgj"]
+[ext_resource type="Resource" uid="uid://c5uyi420b81xb" path="res://People/ppl/adam.tres" id="6_g1kgj"]
 [ext_resource type="Texture2D" uid="uid://b6agsdhmwp342" path="res://ui/background/sky_bckg.png" id="6_pgmnf"]
 [ext_resource type="Texture2D" uid="uid://cls77stfh4mil" path="res://ui/background/game_screen_notexture.png" id="6_qxqqu"]
 [ext_resource type="Texture2D" uid="uid://bvd7yedmblw5k" path="res://ui/background/sky_clouds_small.png" id="7_jdka3"]
-[ext_resource type="Resource" path="res://People/ppl/sadie.tres" id="7_vbc30"]
+[ext_resource type="Resource" uid="uid://bu1hxebrf0byn" path="res://People/ppl/sadie.tres" id="7_vbc30"]
 [ext_resource type="Texture2D" uid="uid://d0ydtwyu2atvl" path="res://ui/background/sky_clouds_big_floofy.png" id="9_urgf3"]
 [ext_resource type="AudioStream" uid="uid://dqc7omw0kns8h" path="res://audio/pampadam.wav" id="13_6l7x8"]
-[ext_resource type="PackedScene" uid="uid://bo3da2yurjpen" path="res://resources/stat_bar_ui.tscn" id="13_ga36s"]
-[ext_resource type="PackedScene" uid="uid://qo8dxnili1y3" path="res://scenes/pause_menu.tscn" id="14_54duj"]
+[ext_resource type="PackedScene" uid="uid://n53bjtjry0gx" path="res://resources/stat_bar_ui.tscn" id="13_ga36s"]
+[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="14_54duj"]
 [ext_resource type="PackedScene" uid="uid://c0ho46do0ixp8" path="res://scenes/ui_bar.tscn" id="14_gxxlg"]
-[ext_resource type="Texture2D" uid="uid://cl7kx08sdg3v4" path="res://ui/tv_faces/face1.png" id="17_gypcm"]
-[ext_resource type="Texture2D" uid="uid://cnmi7spijd4jk" path="res://ui/tv_faces/face2.png" id="18_v1t78"]
-[ext_resource type="Texture2D" uid="uid://dlh7ldgcpicrr" path="res://ui/tv_faces/face3.png" id="19_4uf85"]
-[ext_resource type="Texture2D" uid="uid://dp3x27ntt2ndt" path="res://ui/tv_faces/face4.png" id="20_20wt3"]
-[ext_resource type="Texture2D" uid="uid://cc76dcdsgu4yr" path="res://ui/tv_faces/face5.png" id="21_qw6pn"]
-[ext_resource type="Texture2D" uid="uid://c5af6nt0ypwdq" path="res://ui/tv_faces/face6.png" id="22_omts8"]
-[ext_resource type="Texture2D" uid="uid://b38y3p0jo4y6e" path="res://ui/tv_faces/face7.png" id="23_5w8xc"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_1ne53"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("17_gypcm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_v1t78")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_4uf85")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_20wt3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_qw6pn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_omts8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_5w8xc")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://73i8n64ux23o" path="res://ui/tv_faces/face1.png" id="17_gypcm"]
+[ext_resource type="Texture2D" uid="uid://dlq0c15k6psfi" path="res://ui/tv_faces/face2.png" id="18_v1t78"]
+[ext_resource type="Texture2D" uid="uid://dkk7dnqbc3gn1" path="res://ui/tv_faces/face3.png" id="19_4uf85"]
+[ext_resource type="Texture2D" uid="uid://65igpl4v8vni" path="res://ui/tv_faces/face4.png" id="20_20wt3"]
+[ext_resource type="Texture2D" uid="uid://dtt4cjimvhasr" path="res://ui/tv_faces/face5.png" id="21_qw6pn"]
+[ext_resource type="Texture2D" uid="uid://blo4a70nirp0o" path="res://ui/tv_faces/face6.png" id="22_omts8"]
+[ext_resource type="Texture2D" uid="uid://b5bdcm21xqca7" path="res://ui/tv_faces/face7.png" id="23_5w8xc"]
 
 [node name="Controller" type="Control"]
 layout_mode = 3
@@ -61,6 +32,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i0pye")
+tv_faces = Array[Texture]([ExtResource("23_5w8xc"), ExtResource("22_omts8"), ExtResource("21_qw6pn"), ExtResource("20_20wt3"), ExtResource("19_4uf85"), ExtResource("18_v1t78"), ExtResource("17_gypcm")])
 
 [node name="StatBar" parent="." instance=ExtResource("13_ga36s")]
 layout_mode = 1
@@ -153,8 +125,12 @@ offset_bottom = 40.0
 visible = false
 layout_mode = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(197, 291)
-sprite_frames = SubResource("SpriteFrames_1ne53")
+[node name="TV" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 293.0
+offset_right = 212.0
+offset_bottom = 367.0
+expand_mode = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
