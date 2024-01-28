@@ -6,6 +6,7 @@ var bar
 # metrics
 var money = 200
 var global_happiness = 1500
+var max_global_happiness
 var current_day = 0
 var people: Array[Person]
 var already_served = 0
@@ -51,14 +52,41 @@ func update_metrics(mon, hap):
 	print(money)
 	print(global_happiness)
 	
+func check_lose():
+	if global_happiness <= 0:
+		return true
+	
+	for person in people:
+		if person.is_dead():
+			return true
+	
+	return false
+	
+func check_win():
+	if global_happiness >= max_global_happiness:
+		return true
+		
+	return false
+		
+func end_condition():
+	if check_lose():
+		return goto("lose")
+	
+	if check_win():
+		return goto("win")
+	
 func build_queue():
 	current_level.queue.new_queue()
 	
 func goto(where):
 	if where == "shop":
-		await get_tree().change_scene_to_file("res://scenes/shop.tscn")
+		get_tree().change_scene_to_file("res://scenes/shop.tscn")
 	elif where == "level":
-		await get_tree().change_scene_to_file("res://scenes/levels/level.tscn")
+		get_tree().change_scene_to_file("res://scenes/levels/level.tscn")
+	elif where == "win":
+		print("WIN")
+	elif where == "lose":
+		print("LOSE")
 
 func next_day():
 	current_day += 1

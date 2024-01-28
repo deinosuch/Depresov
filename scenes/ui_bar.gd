@@ -1,9 +1,11 @@
 extends Control
 
-@onready var game_data = get_node("/root/GameData")
+@onready var game_data: GameData = get_node("/root/GameData")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	game_data.max_global_happiness = $NinePatchRect/TextureProgressBar.max_value
+	
 	if not game_data.bar:
 		game_data.bar = self
 		update()

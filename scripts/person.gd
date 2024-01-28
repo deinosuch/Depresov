@@ -21,6 +21,9 @@ func print_out_stat():
 	print(health)
 	print(focus)
 	print(calmness)
+	
+func is_dead():
+	return mood <= 0 or energy <= 0 or health <= 0 or focus <= 0 or calmness <= 0
 
 func add_stats(object : HasStats):
 	mood = max(0, min(100, mood + object.mood))

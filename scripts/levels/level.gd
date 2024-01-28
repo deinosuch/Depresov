@@ -10,7 +10,7 @@ var rng
 const a = 5
 const b = 15
 
-@onready var game = get_node("/root/GameData") 
+@onready var game: GameData = get_node("/root/GameData") 
 
 @onready var stat_bar = $StatBar
 
@@ -40,6 +40,8 @@ func _on_button_pressed():
 	
 	current_person.update_last_val()
 	stat_bar.update()
+	
+	game.end_condition()
 
 func _unhandled_key_input(event):
 	if event.pressed and event.keycode == KEY_ESCAPE:
