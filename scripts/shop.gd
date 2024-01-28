@@ -18,15 +18,6 @@ func _ready():
 		if(i == 16):
 			break
 
-func _on_button_pressed():
-	if total_price > game_state.money:
-		return
-	game_state.money -= total_price
-	total_price = 0
-	# increase day counter
-	game_state.bar.update()
-	game_state.next_day()
-
 func add_to_total(amount : int):
 	total_price += amount
 	total_price_label.text = str(total_price)
@@ -48,5 +39,4 @@ func _on_nine_patch_rect_gui_input(event):
 			total_price = 0
 			# increase day counter
 			game_state.bar.update()
-			game_state.increase_day_count()
-			get_tree().change_scene_to_file("res://scenes/levels/level.tscn")
+			game_state.next_day()
