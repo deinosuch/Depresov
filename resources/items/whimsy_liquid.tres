@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ca0i1fnfmmpl1"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ca0i1fnfmmpl1"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_joqxd"]
+[ext_resource type="AudioStream" uid="uid://udno53gssror" path="res://audio/items/water.wav" id="2_dgbtn"]
 [ext_resource type="Texture2D" uid="uid://bark2f7tdqfr5" path="res://ui/items/whimsy_liquid.png" id="2_sh6q6"]
 
 [resource]
@@ -8,6 +9,7 @@ script = ExtResource("1_joqxd")
 name = "Whimsy Liquid"
 texture = ExtResource("2_sh6q6")
 price = 40
+sound = ExtResource("2_dgbtn")
 mood = 17
 energy = 8
 health = 0

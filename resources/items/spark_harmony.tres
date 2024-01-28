@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://3r84la51wfa"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://3r84la51wfa"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_kpd4v"]
+[ext_resource type="AudioStream" uid="uid://dedirekfeeq22" path="res://audio/items/spark.wav" id="2_kwapf"]
 [ext_resource type="Texture2D" uid="uid://c6fbudvv2v0t6" path="res://ui/items/spark.png" id="2_xbhr1"]
 
 [resource]
@@ -8,6 +9,7 @@ script = ExtResource("1_kpd4v")
 name = "Spark of Harmony"
 texture = ExtResource("2_xbhr1")
 price = 21
+sound = ExtResource("2_kwapf")
 mood = 0
 energy = 9
 health = 0

@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bert0w1i3x58i"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bert0w1i3x58i"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_kb3xs"]
+[ext_resource type="AudioStream" uid="uid://b6hhg22pmdh0o" path="res://audio/items/whisper.wav" id="2_h3a5t"]
 [ext_resource type="Texture2D" uid="uid://5ti1o5lwqaok" path="res://ui/items/pearl.png" id="2_qew62"]
 
 [resource]
@@ -8,6 +9,7 @@ script = ExtResource("1_kb3xs")
 name = "Whisper Pearl"
 texture = ExtResource("2_qew62")
 price = 9
+sound = ExtResource("2_h3a5t")
 mood = -6
 energy = 0
 health = 0

@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dmpx5itvm1tq5"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dmpx5itvm1tq5"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_ydefh"]
+[ext_resource type="AudioStream" uid="uid://bpck8l3a75jmw" path="res://audio/items/crunch.wav" id="2_od6bu"]
 [ext_resource type="Texture2D" uid="uid://lwlhcityuqoi" path="res://ui/items/coffee.png" id="2_tx8gx"]
 
 [resource]
@@ -8,6 +9,7 @@ script = ExtResource("1_ydefh")
 name = "Caffeine"
 texture = ExtResource("2_tx8gx")
 price = 12
+sound = ExtResource("2_od6bu")
 mood = 0
 energy = 10
 health = 0

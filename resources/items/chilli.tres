@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cpg8vqb86pw5g"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cpg8vqb86pw5g"]
 
 [ext_resource type="Script" path="res://scripts/inventory/item.gd" id="1_wousq"]
+[ext_resource type="AudioStream" uid="uid://bpck8l3a75jmw" path="res://audio/items/crunch.wav" id="2_7h7ki"]
 [ext_resource type="Texture2D" uid="uid://ct7okiw1a5vre" path="res://ui/items/pepper.png" id="2_08u4g"]
 
 [resource]
@@ -8,6 +9,7 @@ script = ExtResource("1_wousq")
 name = "Chilli Pepper"
 texture = ExtResource("2_08u4g")
 price = 10
+sound = ExtResource("2_7h7ki")
 mood = 0
 energy = 3
 health = 5
