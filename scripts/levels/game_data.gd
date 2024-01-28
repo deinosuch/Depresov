@@ -8,9 +8,19 @@ var money = 200
 var global_happiness = 1500
 var current_day = 0
 var people: Array[Person]
+var already_served = 0
 
 @onready var rng = RandomNumberGenerator.new()
 
+func get_people_count():
+	return min(people.size(), current_day + 1)
+	
+func reset_served_count():
+	already_served = 0
+	
+func get_people_left():
+	return get_people_count() - already_served
+	
 func _ready():
 	var dirname = "res://People/ppl/" 
 	var files = DirAccess.get_files_at(dirname)

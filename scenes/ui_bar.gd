@@ -10,5 +10,12 @@ func _ready():
 
 func update():
 	$NinePatchRect/TextureProgressBar.value = game_data.global_happiness
-	$NinePatchRect/Label.text = str(game_data.money)
-	$NinePatchRect/Label2.text = "day #" + str(game_data.current_day)
+	$NinePatchRect/MoneyCounter.text = str(game_data.money)
+	$NinePatchRect/DayCounter.text = "day #" + str(game_data.current_day)
+	if game_data.get_people_left() == 0:
+		$NinePatchRect/PersonCounter.hide()
+		$NinePatchRect/PesronIcon.hide()
+	else:
+		$NinePatchRect/PersonCounter.show()
+		$NinePatchRect/PesronIcon.show()
+	$NinePatchRect/PersonCounter.text = str(game_data.get_people_left())

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtxjf14fg2vbm"]
+[gd_scene load_steps=7 format=3 uid="uid://dtxjf14fg2vbm"]
 
 [ext_resource type="Script" path="res://scenes/ui_bar.gd" id="1_ra8r3"]
 [ext_resource type="Texture2D" uid="uid://dk5ktvgj86hdw" path="res://ui/horni_lista.png" id="2_js14y"]
 [ext_resource type="Texture2D" uid="uid://dy0rajwdl18y5" path="res://ui/bar1_empty.png" id="3_p5soo"]
 [ext_resource type="Texture2D" uid="uid://ctobf5jor2fbg" path="res://ui/bar1_full.png" id="4_ykdad"]
 [ext_resource type="Texture2D" uid="uid://qugkgay34vb8" path="res://ui/coin.png" id="5_6254d"]
+[ext_resource type="Texture2D" uid="uid://dny32g5asced1" path="res://ui/person_icon.png" id="6_m874o"]
 
 [node name="UiBar" type="Control"]
 layout_mode = 3
@@ -41,7 +42,7 @@ max_value = 3000.0
 texture_under = ExtResource("3_p5soo")
 texture_progress = ExtResource("4_ykdad")
 
-[node name="TextureRect" type="TextureRect" parent="NinePatchRect"]
+[node name="MoneyIcon" type="TextureRect" parent="NinePatchRect"]
 layout_mode = 0
 offset_left = 1026.0
 offset_top = 6.0
@@ -50,12 +51,21 @@ offset_bottom = 46.0
 texture = ExtResource("5_6254d")
 expand_mode = 2
 
-[node name="Label2" type="Label" parent="NinePatchRect"]
+[node name="PesronIcon" type="TextureRect" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 6.0
+offset_right = 302.0
+offset_bottom = 46.0
+texture = ExtResource("6_m874o")
+expand_mode = 2
+
+[node name="DayCounter" type="Label" parent="NinePatchRect"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 51.0001
+offset_left = 11.0001
 offset_top = 1.0
-offset_right = 159.0
+offset_right = 119.0
 offset_bottom = 36.0
 scale = Vector2(1.5, 1.5)
 text = "day #1"
@@ -63,7 +73,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 text_direction = 1
 
-[node name="Label" type="Label" parent="NinePatchRect"]
+[node name="MoneyCounter" type="Label" parent="NinePatchRect"]
 modulate = Color(0, 0, 0, 1)
 layout_direction = 1
 layout_mode = 0
@@ -72,6 +82,19 @@ offset_right = 967.0
 offset_bottom = 35.0
 scale = Vector2(1.5, 1.5)
 text = "-100"
+horizontal_alignment = 2
+vertical_alignment = 1
+text_direction = 1
+
+[node name="PersonCounter" type="Label" parent="NinePatchRect"]
+modulate = Color(0, 0, 0, 1)
+layout_direction = 1
+layout_mode = 0
+offset_left = 101.0
+offset_right = 209.0
+offset_bottom = 35.0
+scale = Vector2(1.5, 1.5)
+text = "1"
 horizontal_alignment = 2
 vertical_alignment = 1
 text_direction = 1
