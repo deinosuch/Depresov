@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cx0k0caxk5pk"]
+[gd_scene load_steps=24 format=3 uid="uid://cx0k0caxk5pk"]
 
 [ext_resource type="Script" path="res://scripts/levels/level.gd" id="1_i0pye"]
 [ext_resource type="PackedScene" uid="uid://b1pds6iln6nae" path="res://resources/inventory_ui.tscn" id="2_fd0tv"]
@@ -16,6 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://n53bjtjry0gx" path="res://resources/stat_bar_ui.tscn" id="13_ga36s"]
 [ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="14_54duj"]
 [ext_resource type="PackedScene" uid="uid://c0ho46do0ixp8" path="res://scenes/ui_bar.tscn" id="14_gxxlg"]
+[ext_resource type="Texture2D" uid="uid://73i8n64ux23o" path="res://ui/tv_faces/face1.png" id="17_gypcm"]
+[ext_resource type="Texture2D" uid="uid://dlq0c15k6psfi" path="res://ui/tv_faces/face2.png" id="18_v1t78"]
+[ext_resource type="Texture2D" uid="uid://dkk7dnqbc3gn1" path="res://ui/tv_faces/face3.png" id="19_4uf85"]
+[ext_resource type="Texture2D" uid="uid://65igpl4v8vni" path="res://ui/tv_faces/face4.png" id="20_20wt3"]
+[ext_resource type="Texture2D" uid="uid://dtt4cjimvhasr" path="res://ui/tv_faces/face5.png" id="21_qw6pn"]
+[ext_resource type="Texture2D" uid="uid://blo4a70nirp0o" path="res://ui/tv_faces/face6.png" id="22_omts8"]
+[ext_resource type="Texture2D" uid="uid://b5bdcm21xqca7" path="res://ui/tv_faces/face7.png" id="23_5w8xc"]
 
 [node name="Controller" type="Control"]
 layout_mode = 3
@@ -25,6 +32,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i0pye")
+tv_faces = Array[Texture]([ExtResource("23_5w8xc"), ExtResource("22_omts8"), ExtResource("21_qw6pn"), ExtResource("20_20wt3"), ExtResource("19_4uf85"), ExtResource("18_v1t78"), ExtResource("17_gypcm")])
 
 [node name="StatBar" parent="." instance=ExtResource("13_ga36s")]
 layout_mode = 1
@@ -116,5 +124,13 @@ offset_bottom = 40.0
 [node name="Pause" parent="." instance=ExtResource("14_54duj")]
 visible = false
 layout_mode = 1
+
+[node name="TV" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 293.0
+offset_right = 212.0
+offset_bottom = 367.0
+expand_mode = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
