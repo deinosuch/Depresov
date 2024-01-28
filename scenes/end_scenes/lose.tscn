@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://d3dheoc77krh3"]
+
+[ext_resource type="Script" path="res://scenes/end_scenes/start_pbg.gd" id="1_5par5"]
+[ext_resource type="Script" path="res://scenes/ParallaxBackground.gd" id="2_numi8"]
+[ext_resource type="Texture2D" uid="uid://3n7x3tmdvfrm" path="res://ui/background/night/nightsky.png" id="2_q8kw1"]
+[ext_resource type="Texture2D" uid="uid://dkequ6w6k2pe" path="res://ui/background/night/nightsky_moon.png" id="3_uuu2s"]
+[ext_resource type="Texture2D" uid="uid://bbhy12xssnd7t" path="res://ui/background/night/nightsky_floofybigclouds.png" id="4_1uu5y"]
+[ext_resource type="Texture2D" uid="uid://i4c8du7g684v" path="res://ui/background/shop/total_price_counter.png" id="5_bmce1"]
+[ext_resource type="Texture2D" uid="uid://bjgiuysjaxmjr" path="res://ui/background/night/stars.png" id="5_wtw33"]
+
+[node name="Lose" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5par5")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("2_numi8")
+
+[node name="Nightsky" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(483, 265)
+texture = ExtResource("2_q8kw1")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.02, 0.02)
+motion_mirroring = Vector2(2300, 0)
+
+[node name="Stars" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1177.93, 325.5)
+scale = Vector2(0.587963, 0.587963)
+texture = ExtResource("5_wtw33")
+
+[node name="NightskyMoon" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(546, 215)
+texture = ExtResource("3_uuu2s")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(2300, 0)
+
+[node name="NightskyFloofybigclouds" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1182.89, 327)
+scale = Vector2(0.594444, 0.594444)
+texture = ExtResource("4_1uu5y")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = 26.0
+offset_right = 90.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+texture = ExtResource("5_bmce1")
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -11.5
+offset_right = 44.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Main menu"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.5
+offset_top = -174.0
+offset_right = 123.5
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "You lose :("
+
+[connection signal="gui_input" from="NinePatchRect" to="." method="_on_nine_patch_rect_gui_input"]

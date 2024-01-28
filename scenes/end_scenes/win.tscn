@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=3 uid="uid://cmdw6opslovk3"]
+
+[ext_resource type="Script" path="res://scenes/end_scenes/start_pbg.gd" id="1_1wgi3"]
+[ext_resource type="Script" path="res://scenes/ParallaxBackground.gd" id="1_mywsw"]
+[ext_resource type="Texture2D" uid="uid://b6agsdhmwp342" path="res://ui/background/sky_bckg.png" id="2_gqxoy"]
+[ext_resource type="Texture2D" uid="uid://bvd7yedmblw5k" path="res://ui/background/sky_clouds_small.png" id="3_thop4"]
+[ext_resource type="Texture2D" uid="uid://d0ydtwyu2atvl" path="res://ui/background/sky_clouds_big_floofy.png" id="4_ehvqo"]
+[ext_resource type="Texture2D" uid="uid://bw4n2ke4lhhp2" path="res://ui/background/sun.png" id="5_xnu6m"]
+[ext_resource type="Texture2D" uid="uid://b6250hmb8muie" path="res://ui/startscreen_button.png" id="6_bqn3h"]
+[ext_resource type="Texture2D" uid="uid://qugkgay34vb8" path="res://ui/coin.png" id="7_7g7vx"]
+
+[node name="Win" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1wgi3")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_mywsw")
+
+[node name="SkyBckg" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(492, 204)
+texture = ExtResource("2_gqxoy")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(3, 0)
+motion_mirroring = Vector2(2300, 0)
+
+[node name="SkyCloudsSmall" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1191.81, 320.25)
+scale = Vector2(0.595833, 0.595833)
+texture = ExtResource("3_thop4")
+
+[node name="Sun" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(991, 154)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("5_xnu6m")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(2300, 0)
+
+[node name="SkyCloudsBigFloofy" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1186.81, 327)
+scale = Vector2(0.592593, 0.592593)
+texture = ExtResource("4_ehvqo")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = 26.0
+offset_right = 90.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+texture = ExtResource("6_bqn3h")
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Main menu"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -312.0
+offset_top = -174.0
+offset_right = 312.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "You win! Congratulations!"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.5
+offset_top = -104.0
+offset_right = 110.5
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Thanks for playing our game"
+
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(701, 232)
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("7_7g7vx")
+
+[connection signal="gui_input" from="NinePatchRect" to="." method="_on_nine_patch_rect_gui_input"]

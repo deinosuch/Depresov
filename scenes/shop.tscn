@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dvn3iw73005dp"]
+[gd_scene load_steps=19 format=3 uid="uid://dvn3iw73005dp"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_dgp7v"]
 [ext_resource type="Texture2D" uid="uid://d27rfdfs6go0f" path="res://ui/items/worktable.png" id="2_3ingu"]
@@ -7,12 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://dtxjf14fg2vbm" path="res://scenes/ui_bar.tscn" id="5_nn7oi"]
 [ext_resource type="PackedScene" uid="uid://qo8dxnili1y3" path="res://scenes/pause_menu.tscn" id="5_r2f21"]
 [ext_resource type="Script" path="res://scenes/levels/paralax_bg.gd" id="7_0yeoc"]
-[ext_resource type="Texture2D" uid="uid://b6agsdhmwp342" path="res://ui/background/sky_bckg.png" id="8_345vh"]
-[ext_resource type="Texture2D" uid="uid://bvd7yedmblw5k" path="res://ui/background/sky_clouds_small.png" id="9_x67jl"]
-[ext_resource type="Texture2D" uid="uid://d0ydtwyu2atvl" path="res://ui/background/sky_clouds_big_floofy.png" id="10_bac3a"]
+[ext_resource type="Texture2D" uid="uid://3n7x3tmdvfrm" path="res://ui/background/night/nightsky.png" id="8_25oln"]
+[ext_resource type="Texture2D" uid="uid://dkequ6w6k2pe" path="res://ui/background/night/nightsky_moon.png" id="9_ifajm"]
+[ext_resource type="Texture2D" uid="uid://dl4lbtf2ufl3b" path="res://ui/background/night/nightsky_smallclouds.png" id="9_resqd"]
+[ext_resource type="Texture2D" uid="uid://bbhy12xssnd7t" path="res://ui/background/night/nightsky_floofybigclouds.png" id="10_iicq8"]
+[ext_resource type="Texture2D" uid="uid://bjgiuysjaxmjr" path="res://ui/background/night/stars.png" id="10_t523q"]
 [ext_resource type="Texture2D" uid="uid://dgax4w0jmjhbw" path="res://ui/background/shop/shop_bacground.png" id="11_q6q0p"]
 [ext_resource type="Texture2D" uid="uid://dnkflywpfkuh6" path="res://ui/background/shop/shopkeeper_withlegs.png" id="12_d1h7t"]
-[ext_resource type="Texture2D" uid="uid://bj0bjibmn4elk" path="res://ui/startscreen_button.png" id="13_a3wmu"]
+[ext_resource type="Texture2D" uid="uid://b6250hmb8muie" path="res://ui/startscreen_button.png" id="13_a3wmu"]
 [ext_resource type="Texture2D" uid="uid://i4c8du7g684v" path="res://ui/background/shop/total_price_counter.png" id="14_hgdxb"]
 [ext_resource type="Texture2D" uid="uid://qugkgay34vb8" path="res://ui/coin.png" id="15_6uvvk"]
 [ext_resource type="Texture2D" uid="uid://cetdc3ooibc4r" path="res://ui/background/shop/buy_button.png" id="16_r3ddm"]
@@ -135,7 +137,17 @@ scrolling_speed = 80
 [node name="SkyBckg" type="Sprite2D" parent="ParallaxBackground2"]
 z_index = -100
 position = Vector2(504, 253)
-texture = ExtResource("8_345vh")
+texture = ExtResource("8_25oln")
+
+[node name="NightskyMoon" type="Sprite2D" parent="ParallaxBackground2"]
+position = Vector2(258, 165)
+scale = Vector2(0.207407, 0.207407)
+texture = ExtResource("9_ifajm")
+
+[node name="stars" type="Sprite2D" parent="ParallaxBackground2"]
+position = Vector2(219, 228)
+scale = Vector2(0.198148, 0.198148)
+texture = ExtResource("10_t523q")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
 z_index = -60
@@ -145,7 +157,7 @@ motion_mirroring = Vector2(2150, 0)
 [node name="SkyCloudsSmall" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
 position = Vector2(671, 229)
 scale = Vector2(0.544444, 0.544444)
-texture = ExtResource("9_x67jl")
+texture = ExtResource("9_resqd")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground2"]
 z_index = -50
@@ -155,7 +167,7 @@ motion_mirroring = Vector2(1458, 0)
 [node name="SkyCloudsBigFloofy" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer2"]
 position = Vector2(411, 192)
 scale = Vector2(0.356018, 0.356019)
-texture = ExtResource("10_bac3a")
+texture = ExtResource("10_iicq8")
 
 [node name="ShopBacground" type="Sprite2D" parent="ParallaxBackground2"]
 position = Vector2(575.667, 325.25)
@@ -191,5 +203,12 @@ offset_bottom = 334.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 texture = ExtResource("16_r3ddm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1165.0
+offset_bottom = 661.0
+mouse_filter = 2
+color = Color(0, 0, 0.152941, 0.392157)
 
 [connection signal="gui_input" from="NinePatchRect" to="." method="_on_nine_patch_rect_gui_input"]
