@@ -1,10 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvn3iw73005dp"]
+[gd_scene load_steps=17 format=3 uid="uid://dvn3iw73005dp"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_dgp7v"]
 [ext_resource type="Texture2D" uid="uid://d27rfdfs6go0f" path="res://ui/items/worktable.png" id="2_3ingu"]
 [ext_resource type="PackedScene" path="res://scenes/shop_item.tscn" id="3_1eqh0"]
 [ext_resource type="AudioStream" uid="uid://do2nlam7be7o3" path="res://audio/shop.wav" id="4_rm2b7"]
-[ext_resource type="PackedScene" path="res://scenes/ui_bar.tscn" id="5_nn7oi"]
+[ext_resource type="PackedScene" uid="uid://dtxjf14fg2vbm" path="res://scenes/ui_bar.tscn" id="5_nn7oi"]
+[ext_resource type="PackedScene" uid="uid://qo8dxnili1y3" path="res://scenes/pause_menu.tscn" id="5_r2f21"]
+[ext_resource type="Script" path="res://scenes/levels/paralax_bg.gd" id="7_0yeoc"]
+[ext_resource type="Texture2D" uid="uid://b6agsdhmwp342" path="res://ui/background/sky_bckg.png" id="8_345vh"]
+[ext_resource type="Texture2D" uid="uid://bvd7yedmblw5k" path="res://ui/background/sky_clouds_small.png" id="9_x67jl"]
+[ext_resource type="Texture2D" uid="uid://d0ydtwyu2atvl" path="res://ui/background/sky_clouds_big_floofy.png" id="10_bac3a"]
+[ext_resource type="Texture2D" uid="uid://dgax4w0jmjhbw" path="res://ui/background/shop/shop_bacground.png" id="11_q6q0p"]
+[ext_resource type="Texture2D" uid="uid://dnkflywpfkuh6" path="res://ui/background/shop/shopkeeper_withlegs.png" id="12_d1h7t"]
+[ext_resource type="Texture2D" uid="uid://b6250hmb8muie" path="res://ui/startscreen_button.png" id="13_a3wmu"]
+[ext_resource type="Texture2D" uid="uid://i4c8du7g684v" path="res://ui/background/shop/total_price_counter.png" id="14_hgdxb"]
+[ext_resource type="Texture2D" uid="uid://qugkgay34vb8" path="res://ui/coin.png" id="15_6uvvk"]
+[ext_resource type="Texture2D" uid="uid://cetdc3ooibc4r" path="res://ui/background/shop/buy_button.png" id="16_r3ddm"]
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -17,11 +28,14 @@ script = ExtResource("1_dgp7v")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 939.0
-offset_top = 256.0
-offset_right = 1098.0
-offset_bottom = 316.0
+offset_left = 942.0
+offset_top = 186.0
+offset_right = 1096.0
+offset_bottom = 249.0
+theme_override_font_sizes/font_size = 44
 text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Panel" type="NinePatchRect" parent="."]
 custom_minimum_size = Vector2(650, 165)
@@ -101,14 +115,6 @@ layout_mode = 2
 [node name="ShopItem16" parent="Panel/GridContainer" instance=ExtResource("3_1eqh0")]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 936.0
-offset_top = 350.0
-offset_right = 1099.0
-offset_bottom = 406.0
-text = "Buy"
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_rm2b7")
 volume_db = -5.0
@@ -118,4 +124,72 @@ autoplay = true
 layout_mode = 1
 offset_bottom = -598.0
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Pause" parent="." instance=ExtResource("5_r2f21")]
+visible = false
+layout_mode = 1
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+script = ExtResource("7_0yeoc")
+scrolling_speed = 80
+
+[node name="SkyBckg" type="Sprite2D" parent="ParallaxBackground2"]
+z_index = -100
+position = Vector2(504, 253)
+texture = ExtResource("8_345vh")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+z_index = -60
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(2150, 0)
+
+[node name="SkyCloudsSmall" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2(671, 229)
+scale = Vector2(0.544444, 0.544444)
+texture = ExtResource("9_x67jl")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground2"]
+z_index = -50
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(1458, 0)
+
+[node name="SkyCloudsBigFloofy" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer2"]
+position = Vector2(411, 192)
+scale = Vector2(0.356018, 0.356019)
+texture = ExtResource("10_bac3a")
+
+[node name="ShopBacground" type="Sprite2D" parent="ParallaxBackground2"]
+position = Vector2(575.667, 325.25)
+scale = Vector2(0.599537, 0.599537)
+texture = ExtResource("11_q6q0p")
+
+[node name="ShopkeeperWithlegs" type="Sprite2D" parent="ParallaxBackground2"]
+position = Vector2(587, 362)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_d1h7t")
+
+[node name="StartscreenButton" type="Sprite2D" parent="ParallaxBackground2"]
+position = Vector2(984, 253)
+scale = Vector2(1, 1.44)
+texture = ExtResource("13_a3wmu")
+
+[node name="TotalPriceCounter" type="Sprite2D" parent="ParallaxBackground2"]
+position = Vector2(984, 216)
+scale = Vector2(0.896491, 0.984536)
+texture = ExtResource("14_hgdxb")
+
+[node name="Coin" type="Sprite2D" parent="ParallaxBackground2"]
+position = Vector2(904, 216)
+scale = Vector2(0.8375, 0.8375)
+texture = ExtResource("15_6uvvk")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 273.0
+offset_right = 1071.0
+offset_bottom = 334.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture = ExtResource("16_r3ddm")
+
+[connection signal="gui_input" from="NinePatchRect" to="." method="_on_nine_patch_rect_gui_input"]

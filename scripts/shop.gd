@@ -30,3 +30,23 @@ func _on_button_pressed():
 func add_to_total(amount : int):
 	total_price += amount
 	total_price_label.text = str(total_price)
+
+func _unhandled_key_input(event):
+	if event.pressed and event.keycode == KEY_ESCAPE:
+		$Pause.show()
+
+func unpause():
+	$Pause.hide()
+
+
+func _on_nine_patch_rect_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if total_price > game_state.money:
+				return
+			game_state.money -= total_price
+			total_price = 0
+			# increase day counter
+			game_state.bar.update()
+			game_state.increase_day_count()
+			get_tree().change_scene_to_file("res://scenes/levels/level.tscn")
