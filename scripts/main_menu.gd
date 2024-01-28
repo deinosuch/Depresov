@@ -14,9 +14,15 @@ func _process(delta):
 func _on_start_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			get_node("/root/GameData").next_day()
+			GameData.next_day()
 
 func _on_quit_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-				get_tree().quit()
+			get_tree().quit()
+
+
+func _on_credits_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			GameData.goto("credits")

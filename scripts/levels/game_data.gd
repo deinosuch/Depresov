@@ -87,6 +87,8 @@ func goto(where):
 		print("WIN")
 	elif where == "lose":
 		print("LOSE")
+	elif where == "credits":
+		get_tree().change_scene_to_file("res://scenes/end_scenes/credits.tscn")
 
 func next_day():
 	current_day += 1
