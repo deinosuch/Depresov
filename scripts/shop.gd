@@ -21,6 +21,13 @@ func _ready():
 func add_to_total(amount : int):
 	total_price += amount
 	total_price_label.text = str(total_price)
+	
+	# coloring based on money
+	if total_price > game_state.money:
+		total_price_label.add_theme_color_override("font_color", Color.PALE_VIOLET_RED)
+	else:
+		total_price_label.add_theme_color_override("font_color", Color.WHITE)
+		
 
 func _unhandled_key_input(event):
 	if event.pressed and event.keycode == KEY_ESCAPE:
