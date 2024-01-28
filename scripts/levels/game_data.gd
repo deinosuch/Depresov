@@ -98,6 +98,8 @@ func goto(where):
 		get_tree().change_scene_to_file("res://scenes/end_scenes/lose.tscn")
 	elif where == "main_menu":
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	elif where == "credits":
+		get_tree().change_scene_to_file("res://scenes/end_scenes/credits.tscn")
 
 func quit():
 	get_tree().quit()

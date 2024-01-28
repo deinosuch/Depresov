@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dvn3iw73005dp"]
+[gd_scene load_steps=20 format=3 uid="uid://dvn3iw73005dp"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_dgp7v"]
 [ext_resource type="Texture2D" uid="uid://d27rfdfs6go0f" path="res://ui/items/worktable.png" id="2_3ingu"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://i4c8du7g684v" path="res://ui/background/shop/total_price_counter.png" id="14_hgdxb"]
 [ext_resource type="Texture2D" uid="uid://qugkgay34vb8" path="res://ui/coin.png" id="15_6uvvk"]
 [ext_resource type="Texture2D" uid="uid://cetdc3ooibc4r" path="res://ui/background/shop/buy_button.png" id="16_r3ddm"]
+[ext_resource type="Texture2D" uid="uid://cv1050k6ja7k4" path="res://ui/background/shop/shop_darkness_overlay.png" id="19_eoc1f"]
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -204,11 +205,12 @@ mouse_filter = 1
 mouse_default_cursor_shape = 2
 texture = ExtResource("16_r3ddm")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1165.0
-offset_bottom = 661.0
+offset_right = 1152.0
+offset_bottom = 650.0
 mouse_filter = 2
-color = Color(0, 0, 0.152941, 0.392157)
+texture = ExtResource("19_eoc1f")
+expand_mode = 1
 
 [connection signal="gui_input" from="NinePatchRect" to="." method="_on_nine_patch_rect_gui_input"]
