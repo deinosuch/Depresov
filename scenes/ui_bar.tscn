@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtxjf14fg2vbm"]
+[gd_scene load_steps=6 format=3 uid="uid://c0ho46do0ixp8"]
 
 [ext_resource type="Script" path="res://scenes/ui_bar.gd" id="1_ra8r3"]
 [ext_resource type="Texture2D" uid="uid://dk5ktvgj86hdw" path="res://ui/horni_lista.png" id="2_js14y"]
@@ -41,7 +41,7 @@ max_value = 3000.0
 texture_under = ExtResource("3_p5soo")
 texture_progress = ExtResource("4_ykdad")
 
-[node name="TextureRect" type="TextureRect" parent="NinePatchRect"]
+[node name="MoneyIcon" type="TextureRect" parent="NinePatchRect"]
 layout_mode = 0
 offset_left = 1026.0
 offset_top = 6.0
@@ -50,12 +50,20 @@ offset_bottom = 46.0
 texture = ExtResource("5_6254d")
 expand_mode = 2
 
-[node name="Label2" type="Label" parent="NinePatchRect"]
+[node name="PersonIcon" type="TextureRect" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 6.0
+offset_right = 302.0
+offset_bottom = 46.0
+expand_mode = 2
+
+[node name="DayCounter" type="Label" parent="NinePatchRect"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 51.0001
+offset_left = 11.0001
 offset_top = 1.0
-offset_right = 159.0
+offset_right = 119.0
 offset_bottom = 36.0
 scale = Vector2(1.5, 1.5)
 text = "day #1"
@@ -63,7 +71,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 text_direction = 1
 
-[node name="Label" type="Label" parent="NinePatchRect"]
+[node name="MoneyCounter" type="Label" parent="NinePatchRect"]
 modulate = Color(0, 0, 0, 1)
 layout_direction = 1
 layout_mode = 0
@@ -72,6 +80,19 @@ offset_right = 967.0
 offset_bottom = 35.0
 scale = Vector2(1.5, 1.5)
 text = "-100"
+horizontal_alignment = 2
+vertical_alignment = 1
+text_direction = 1
+
+[node name="PersonCounter" type="Label" parent="NinePatchRect"]
+modulate = Color(0, 0, 0, 1)
+layout_direction = 1
+layout_mode = 0
+offset_left = 101.0
+offset_right = 209.0
+offset_bottom = 35.0
+scale = Vector2(1.5, 1.5)
+text = "1"
 horizontal_alignment = 2
 vertical_alignment = 1
 text_direction = 1
