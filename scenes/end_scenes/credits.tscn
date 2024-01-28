@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cb72r2lbw2qjo"]
 
-[ext_resource type="Script" path="res://scenes/end_scenes/start_pbg.gd" id="1_6ffkh"]
+[ext_resource type="Script" path="res://scenes/end_scenes/menu_pbg.gd" id="1_0si6q"]
 [ext_resource type="Script" path="res://scenes/ParallaxBackground.gd" id="2_auore"]
 [ext_resource type="Texture2D" uid="uid://b6agsdhmwp342" path="res://ui/background/sky_bckg.png" id="3_ppc4u"]
 [ext_resource type="Texture2D" uid="uid://bvd7yedmblw5k" path="res://ui/background/sky_clouds_small.png" id="4_juhfu"]
@@ -15,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6ffkh")
+script = ExtResource("1_0si6q")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource("2_auore")

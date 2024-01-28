@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://n53bjtjry0gx"]
 
 [ext_resource type="Script" path="res://resources/stat_bar_ui.gd" id="1_f2g6h"]
-[ext_resource type="PackedScene" uid="uid://3sgsxy4dyciu" path="res://resources/progress_bar_ui.tscn" id="1_sjevm"]
+[ext_resource type="PackedScene" path="res://resources/progress_bar_ui.tscn" id="1_sjevm"]
 
 [node name="StatBar" type="Control"]
 layout_mode = 3
