@@ -51,7 +51,7 @@ offset_bottom = 46.0
 texture = ExtResource("5_6254d")
 expand_mode = 2
 
-[node name="PesronIcon" type="TextureRect" parent="NinePatchRect"]
+[node name="PersonIcon" type="TextureRect" parent="NinePatchRect"]
 layout_mode = 0
 offset_left = 262.0
 offset_top = 6.0

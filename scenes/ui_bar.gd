@@ -14,8 +14,8 @@ func update():
 	$NinePatchRect/DayCounter.text = "day #" + str(game_data.current_day)
 	if game_data.get_people_left() == 0:
 		$NinePatchRect/PersonCounter.hide()
-		$NinePatchRect/PesronIcon.hide()
+		$NinePatchRect/PersonIcon.hide()
 	else:
 		$NinePatchRect/PersonCounter.show()
-		$NinePatchRect/PesronIcon.show()
+		$NinePatchRect/PersonIcon.show()
 	$NinePatchRect/PersonCounter.text = str(game_data.get_people_left())
