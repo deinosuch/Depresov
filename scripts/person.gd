@@ -31,7 +31,6 @@ func add_stats(object : HasStats):
 	health = max(0, min(100, health + object.health))
 	focus = max(0, min(100, focus + object.focus))
 	calmness = max(0, min(100, calmness + object.calmness))
-	ResourceSaver.save(self)
 
 func get_metrics():
 	var diff = get_difference()
@@ -68,7 +67,6 @@ func set_array_to_stats(vals):
 	health = max(0, min(100, vals[2]))
 	focus = max(0, min(100, vals[3]))
 	calmness = max(0, min(100, vals[4]))
-	ResourceSaver.save(self)
 	
 func add_array_to_stats(vals):
 	mood = max(0, min(100, mood + vals[0]))
@@ -76,4 +74,3 @@ func add_array_to_stats(vals):
 	health = max(0, min(100, health + vals[2]))
 	focus = max(0, min(100, focus + vals[3]))
 	calmness = max(0, min(100, calmness + vals[4]))
-	ResourceSaver.save(self)

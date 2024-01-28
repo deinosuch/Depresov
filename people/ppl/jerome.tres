@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://muxlc64kd6as"]
+
+[ext_resource type="Script" path="res://scripts/person.gd" id="1_owed3"]
+[ext_resource type="Texture2D" uid="uid://cbmgyrsgc3feo" path="res://ui/people/jerome.png" id="2_cafgy"]
+
+[resource]
+script = ExtResource("1_owed3")
+name = "Jerome"
+rights = true
+sprite = ExtResource("2_cafgy")
+mood = 38.14
+energy = 55.2286
+health = 55.1292
+focus = 36.0729
+calmness = 48.9714

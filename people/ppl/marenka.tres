@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Person" load_steps=3 format=3 uid="uid://cr7i63cpdf6ui"]
+
+[ext_resource type="Script" path="res://scripts/person.gd" id="1_ft2d5"]
+[ext_resource type="Texture2D" uid="uid://cohmkvycrppyk" path="res://ui/people/marenka.png" id="2_xyjrp"]
+
+[resource]
+script = ExtResource("1_ft2d5")
+name = "Marenka"
+rights = true
+sprite = ExtResource("2_xyjrp")
+mood = 37.3442
+energy = 55.5783
+health = 46.6188
+focus = 62.0663
+calmness = 39.9837

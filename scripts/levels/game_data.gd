@@ -29,10 +29,10 @@ func load_assets():
 	load_people()
 	
 func load_people():
-	var dirname = "res://People/ppl/" 
+	var dirname = "res://people/ppl/" 
 	var files = DirAccess.get_files_at(dirname)
 	for file in files:
-		var person = load(dirname + file)
+		var person = load(dirname + file.trim_suffix(".remap"))
 		people.append(person)
 		reset_person(person) 
 	

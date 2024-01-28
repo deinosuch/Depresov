@@ -12,7 +12,7 @@ func _ready():
 	
 	var i = 0
 	for filename in DirAccess.get_files_at(directory_path):
-		var item = load(directory_path + filename)
+		var item = load(directory_path + filename.trim_suffix(".remap"))
 		$Panel/GridContainer.get_child(i).initialize(item)
 		i+=1
 		if(i == 16):
