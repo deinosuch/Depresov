@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3dheoc77krh3"]
+[gd_scene load_steps=9 format=3 uid="uid://d3dheoc77krh3"]
 
 [ext_resource type="Script" path="res://scenes/end_scenes/start_pbg.gd" id="1_5par5"]
 [ext_resource type="Script" path="res://scenes/ParallaxBackground.gd" id="2_numi8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bbhy12xssnd7t" path="res://ui/background/night/nightsky_floofybigclouds.png" id="4_1uu5y"]
 [ext_resource type="Texture2D" uid="uid://i4c8du7g684v" path="res://ui/background/shop/total_price_counter.png" id="5_bmce1"]
 [ext_resource type="Texture2D" uid="uid://bjgiuysjaxmjr" path="res://ui/background/night/stars.png" id="5_wtw33"]
+[ext_resource type="AudioStream" uid="uid://bxv8lqe2nrtdh" path="res://audio/fart.wav" id="8_ro4fn"]
 
 [node name="Lose" type="Control"]
 layout_mode = 3
@@ -94,5 +95,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "You lose :("
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_ro4fn")
+autoplay = true
 
 [connection signal="gui_input" from="NinePatchRect" to="." method="_on_nine_patch_rect_gui_input"]

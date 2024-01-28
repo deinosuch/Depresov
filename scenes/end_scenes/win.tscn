@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cmdw6opslovk3"]
+[gd_scene load_steps=10 format=3 uid="uid://cmdw6opslovk3"]
 
 [ext_resource type="Script" path="res://scenes/end_scenes/start_pbg.gd" id="1_1wgi3"]
 [ext_resource type="Script" path="res://scenes/ParallaxBackground.gd" id="1_mywsw"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bw4n2ke4lhhp2" path="res://ui/background/sun.png" id="5_xnu6m"]
 [ext_resource type="Texture2D" uid="uid://bj0bjibmn4elk" path="res://ui/startscreen_button.png" id="6_bqn3h"]
 [ext_resource type="Texture2D" uid="uid://qugkgay34vb8" path="res://ui/coin.png" id="7_7g7vx"]
+[ext_resource type="AudioStream" uid="uid://bcm5q3yh8d3tf" path="res://audio/items/stardust.wav" id="9_1mm2m"]
 
 [node name="Win" type="Control"]
 layout_mode = 3
@@ -118,5 +119,9 @@ text = "Thanks for playing our game"
 position = Vector2(701, 232)
 scale = Vector2(0.225, 0.225)
 texture = ExtResource("7_7g7vx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_1mm2m")
+autoplay = true
 
 [connection signal="gui_input" from="NinePatchRect" to="." method="_on_nine_patch_rect_gui_input"]
