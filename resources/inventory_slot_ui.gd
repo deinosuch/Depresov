@@ -28,7 +28,9 @@ func initialize(slot: Slot):
 		var text = "%s: %s" % [self.slot.item.stat_names[i], stats[i]]
 		stat_new.text = text
 		stat_sheet.add_child(stat_new)
-		
+	#var stat_new = stat.duplicate()
+	#stat_new.text = "AAAAAAA"
+	#stat_sheet.add_child(stat_new)
 
 func is_empty():
 	return !slot or slot.is_empty()

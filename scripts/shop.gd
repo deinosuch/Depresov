@@ -25,8 +25,10 @@ func add_to_total(amount : int):
 	# coloring based on money
 	if total_price > game_state.money:
 		total_price_label.add_theme_color_override("font_color", Color.PALE_VIOLET_RED)
+		$NinePatchRect.texture = preload("res://ui/background/shop/buy_button_deactive.png")
 	else:
 		total_price_label.add_theme_color_override("font_color", Color.WHITE)
+		$NinePatchRect.texture = preload("res://ui/background/shop/buy_button.png")
 		
 
 func _unhandled_key_input(event):

@@ -5,7 +5,7 @@ var inventory: Inventory = null
 var bar
 # metrics
 var money = 200
-var global_happiness = 5000
+var global_happiness = 1500
 var current_day = 0
 var people: Array[Person]
 
